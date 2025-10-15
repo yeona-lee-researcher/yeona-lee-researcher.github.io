@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko"><head>
+<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects · Hyoyeon (Yeona) Lee</title>
 <link rel="stylesheet" href="/assets/style.css"></head>
@@ -8,27 +8,45 @@
   <nav class="nav"><a href="/about/">About</a><a href="/research/">Research</a><a href="/teaching/">Teaching</a><a href="/projects/">Projects</a><a href="/news/">News</a><a href="/cv/">CV</a></nav>
 </div></header>
 <main class="container main">
-
 <h1>Projects</h1>
-<ul class="cards">
-  <li class="card">
-    <h3>Alpha-Helix: Quant Research Pipeline</h3>
-    <p>Repo-structured pipeline for ingestion, feature lab, strategy research, and backtesting.</p>
-    <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Vectorbt</span></div>
-  </li>
-  <li class="card">
-    <h3>BLSA Optimization Platform</h3>
-    <p>Process parameter optimization with Bayesian optimization & robust ML.</p>
-    <div class="tags"><span class="tag">BayesOpt</span><span class="tag">PyTorch</span><span class="tag">AWS</span></div>
-  </li>
-  <li class="card">
-    <h3>MECC Early Detection</h3>
-    <p>Anomaly detection and alarming on multi-modal semiconductor test logs.</p>
-    <div class="tags"><span class="tag">Anomaly</span><span class="tag">Dask</span><span class="tag">Airflow</span></div>
-  </li>
-</ul>
-<p class="small">각 카드에 GitHub/논문/포스트 링크 버튼도 추가할 수 있어요.</p>
+<section class="section">
+  <h2>Project <strong>Alpha‑Helix</strong> 🧬 — End‑to‑End Quantitative Research & Trading System</h2>
+  <p class="disclosure">Open personal side project (company work is proprietary).</p>
+  <p>This single, large‑scale project contains three tightly integrated modules to demonstrate true “full‑stack” capability across the entire quant lifecycle — from data ingestion to research and live execution.</p>
+
+  <div class="module" id="chronos">
+    <h3><strong>Module 1: “Chronos” · Datalake — Governing the time of data</strong></h3>
+    <p><em>Goal:</em> Build an automated, high‑quality data pipeline that becomes the foundation for all quantitative research (emphasizing data‑engineering skill).</p>
+    <p><em>Key capabilities:</em></p>
+    <ul>
+      <li><strong>Automated ingestion.</strong> Use Airflow to automatically collect historical market and on‑chain data every day and store it in object storage such as S3.</li>
+      <li><strong>Data quality management.</strong> Integrate Great Expectations into the pipeline to automatically validate missing values, outliers, and schema, and generate human‑readable reports.</li>
+      <li><strong>Efficient storage & access.</strong> Leverage Parquet and DuckDB so that even very large datasets can be loaded in seconds for any requested time window and shape.</li>
+    </ul>
+  </div>
+
+  <div class="module" id="hermes">
+    <h3><strong>Module 2: “Hermes” · Real‑time Signal Engine — Delivering the market’s signals</strong></h3>
+    <p><em>Goal:</em> Receive market data in real time, analyze it, and generate meaningful trading signals with minimal latency (emphasizing ML engineering / algorithmic trading skill).</p>
+    <p><em>Key capabilities:</em></p>
+    <ul>
+      <li><strong>Asynchronous data processing.</strong> Use <code>asyncio</code> and WebSocket to ingest data from multiple exchanges simultaneously in a non‑blocking fashion.</li>
+      <li><strong>Real‑time feature extraction.</strong> Use Redis as a state store and compute rolling microstructure features (e.g., OFI, realized volatility) directly on the stream.</li>
+      <li><strong>Message‑queue architecture.</strong> Employ Redis Pub/Sub to decouple ingestion → feature extraction → signal generation, ensuring scalability and robustness.</li>
+    </ul>
+  </div>
+
+  <div class="module" id="athena">
+    <h3><strong>Module 3: “Athena” · Strategy & Insight Dashboard — Finding wisdom in data</strong></h3>
+    <p><em>Goal:</em> Discover new alpha strategies using the datalake and signal engine, and analyze/monitor their performance in an intuitive way (emphasizing quant strategy skill).</p>
+    <p><em>Key capabilities:</em></p>
+    <ul>
+      <li><strong>Regime‑based strategies.</strong> Use ML models such as HMM to classify the market into regimes (trend / range / high‑vol) and automatically switch strategies per regime.</li>
+      <li><strong>Systematic experiment management.</strong> Adopt MLflow to record parameters, performance metrics, and result charts for a large number of backtests, enabling rigorous comparison.</li>
+      <li><strong>Interactive dashboard.</strong> Build Streamlit/Dash dashboards to monitor current regime state, recommended strategies, paper‑trading performance, and key on‑chain indicators.</li>
+    </ul>
+  </div>
+</section>
 
   <div class="footer">© 2025 Hyoyeon (Yeona) Lee · Hosted on GitHub Pages</div>
-</main>
-</body></html>
+</main></body></html>
