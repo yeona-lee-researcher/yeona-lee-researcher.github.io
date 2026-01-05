@@ -88,7 +88,6 @@
   <div class="footer">© 2025 Hyoyeon (Yeona) Lee · Hosted on GitHub Pages</div>
 </main></body></html> -->
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -97,7 +96,6 @@
   <title>Home · Hyoyeon (Yeona) Lee</title>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-
 <body>
 <header class="header">
   <div class="container header-inner">
@@ -129,160 +127,102 @@
 
   <section class="section">
     <p>
-      Hi, I’m <strong>Hyoyeon (Yeona) Lee</strong>. I build end-to-end data & ML systems for semiconductor and finance.
+      Hi, I’m <strong>Hyoyeon (Yeona) Lee</strong>.
+      I build end-to-end data & ML systems for semiconductor and finance.
       My interests include decision-making, optimization, robust/trustworthy ML, and quantitative research.
     </p>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- WORK EXPERIENCE -->
   <section class="section">
-    <h2>Experience</h2>
+    <h2>
+      Work Experience
+      <img
+        src="/assets/img/samsung-wordmark.png"
+        alt="Samsung"
+        style="height:22px;vertical-align:-4px;margin-left:10px"
+      >
+    </h2>
 
-    <div class="exp-grid">
+    <ul>
+      <li><strong>AI model optimization at large-scale manufacturing sites.</strong> On real DRAM mass-production lines, deployed ML optimization frameworks on high-volume test streams and achieved record-high yields for new products. Engineered Bit Line Sense Amplifier (BLSA) optimization with Python and C/C++; built a cloud edge-computing–based platform that performs real-time optimization and automation across multi-device testing environments. Afterward, I directly set up the ML optimization system for <em>all</em> incoming DRAM product requests.</li>
+      <li><strong>Big-data & platform engineering.</strong> Designed and operated a TB-scale parallel processing framework using Dask, PyArrow, and AWS Glue to handle production logs. Fully automated anomaly detection via Airflow pipelines. Authored seven reusable automation tools that reduced repetitive tasks by ~90%, with results validated by team and division awards.</li>
+      <li><strong>Independent R&D (Algorithms · Causal/RL).</strong> Performed defect-cause inference using ML data analytics, hybrid ML tuning for process parameters, and robust reinforcement learning. Results include an IEEM-accepted paper and presentation, two patents, and CEO/Best Paper awards.</li>
+      <li><strong>Leadership · Communication · Education.</strong> Served as Culture Agent for a 50-member team and taught internal ML seminars (won Best Seminar Award). Consistently connected seminar/research insights to independent decision-making on new algorithm development projects.</li>
+    </ul>
 
-      <!-- Work (Samsung) -->
-      <article class="exp-card">
-        <h3 class="exp-title">
-          Work Experience
-          <img class="logo-inline" src="/assets/img/samsung-badge.svg" alt="Samsung Electronics">
-        </h3>
-
-        <ul>
-          <li>
-            <strong>AI model optimization at large-scale manufacturing sites.</strong>
-            On real DRAM mass-production lines, deployed ML optimization frameworks on high-volume test streams and achieved
-            record-high yields for new products. Engineered Bit Line Sense Amplifier (BLSA) optimization with Python and C/C++;
-            built a cloud edge-computing–based platform that performs real-time optimization and automation across multi-device
-            testing environments. Afterward, I directly set up the ML optimization system for <em>all</em> incoming DRAM product requests.
-          </li>
-          <li>
-            <strong>Big-data & platform engineering.</strong>
-            Designed and operated a TB-scale parallel processing framework using Dask, PyArrow, and AWS Glue to handle production logs.
-            Fully automated anomaly detection via Airflow pipelines. Authored seven reusable automation tools that reduced repetitive tasks
-            by ~90%, with results validated by team and division awards.
-          </li>
-          <li>
-            <strong>Independent R&D (Algorithms · Causal/RL).</strong>
-            Performed defect-cause inference using ML data analytics, hybrid ML tuning for process parameters, and robust reinforcement learning.
-            Results include an IEEM-accepted paper and presentation, two patents, and CEO/Best Paper awards.
-          </li>
-          <li>
-            <strong>Leadership · Communication · Education.</strong>
-            Served as Culture Agent for a 50-member team and taught internal ML seminars (won Best Seminar Award). Consistently connected
-            seminar/research insights to independent decision-making on new algorithm development projects.
-          </li>
-        </ul>
-
-        <div class="badges">
-          <span class="badge">Google Professional ML Engineer</span>
-          <span class="badge">AWS Solutions Architect – Associate</span>
-          <span class="badge">AWS Machine Learning – Specialty</span>
-          <span class="badge">AWS Data Engineer – Associate</span>
-        </div>
-      </article>
-
-      <!-- Research (Korea Univ.) -->
-      <article class="exp-card">
-        <h3 class="exp-title">
-          Research Experience
-          <!-- 파일 추가 필요: /assets/img/korea-univ-badge.svg -->
-          <img class="logo-inline" src="/assets/img/korea-univ-badge.svg" alt="Korea University">
-        </h3>
-
-        <p class="small" style="margin-top:6px;">
-          M.S. in Statistics, Korea University (2018–2021)
-        </p>
-
-        <ul>
-          <li>
-            <strong>Statistics Consultant, Korea University Statistics Consulting Center (2019–2021).</strong>
-            Analyzed chronic kidney disease progression using survival models on clinical time-series data; identified early dementia biomarkers
-            via structural equation modeling and cluster analysis; evaluated impact of teaching methods through factor analysis and regression.
-          </li>
-          <li>
-            <strong>Research Assistant, National Statistical Research Center (2018–2019).</strong>
-            Performed Bayesian change-point survival analysis to evaluate vaccine effectiveness and durability; developed statistical learning methodologies
-            for personalized medical treatment recommendations; conducted semi-parametric survival analysis for dependent censoring and dynamic treatment regimes.
-          </li>
-        </ul>
-
-        <div class="callouts">
-          <a class="btn" href="/research/">Go to Research →</a>
-          <a class="btn btn-ghost" href="/cv/">See CV →</a>
-        </div>
-      </article>
-
+    <!-- skill badges (요청: ML optimization automation Python Java Cloud AWS GCP) -->
+    <div class="badges">
+      <span class="badge">ML optimization</span>
+      <span class="badge">Automation</span>
+      <span class="badge">Python</span>
+      <span class="badge">Java</span>
+      <span class="badge">Cloud</span>
+      <span class="badge">AWS</span>
+      <span class="badge">GCP</span>
     </div>
   </section>
 
-  <!-- PROJECTS (cards only) -->
+  <!-- KOREA UNIVERSITY EXPERIENCE -->
+  <section class="section">
+    <h2>
+      Research Experience
+      <img
+        src="/assets/img/korea-univ-logo-eng.png"
+        alt="Korea University"
+        style="height:22px;vertical-align:-4px;margin-left:10px"
+      >
+    </h2>
+
+    <ul>
+      <li><strong>Statistics Consultant, Korea University Statistics Consulting Center (2019–2021).</strong>
+        Analyzed chronic kidney disease progression using survival models on clinical time-series data. Identified early dementia biomarkers via structural equation modeling and cluster analysis. Evaluated impact of teaching methods through factor analysis and regression in child education study.
+      </li>
+      <li><strong>Research Assistant, National Statistical Research Center (2018–2019).</strong>
+        Performed Bayesian change-point survival analysis to evaluate vaccine effectiveness and durability. Developed statistical learning methodologies for personalized medical treatment recommendations. Conducted semi-parametric survival analysis for dependent censoring and dynamic treatment regimes.
+      </li>
+    </ul>
+
+    <p class="small" style="margin-top:10px;">
+      (More details on <a href="/cv/">CV</a>.)
+    </p>
+  </section>
+
+  <!-- PROJECTS (홈에서는 카드로만 간단히) -->
   <section class="section">
     <h2>Selected Projects</h2>
-    <p class="disclosure">Open personal side project (company work is proprietary).</p>
+    <p class="disclosure">Project details and demos are organized on the <a href="/projects/">Projects</a> page.</p>
 
-    <div class="card-grid">
-
-      <article class="card">
-        <h3>ML Optimization & Automation Platform (Production)</h3>
-        <p class="small">
-          Production-grade optimization & automation system spanning edge/cloud environments and multi-device testing workflows.
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
+      <a href="/projects/" class="module" style="display:block;text-decoration:none;">
+        <h3 style="margin-top:0;"><strong>DRAM ML Optimization & Automation</strong></h3>
+        <p class="small" style="margin:6px 0 10px 0;">
+          Production-grade optimization + automation pipeline for high-volume test streams (proprietary details abstracted).
         </p>
-        <div class="tags">
-          <span class="tag">ML optimization</span>
-          <span class="tag">automation</span>
-          <span class="tag">Python</span>
-          <span class="tag">Java</span>
-          <span class="tag">Cloud</span>
-          <span class="tag">AWS</span>
-          <span class="tag">GCP</span>
+        <div class="badges">
+          <span class="badge">ML optimization</span><span class="badge">Automation</span><span class="badge">Python</span><span class="badge">C/C++</span>
         </div>
-        <div class="card-actions">
-          <a class="btn" href="/projects/">Details →</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="card">
-        <h3>TB-scale Data Platform & Monitoring</h3>
-        <p class="small">
-          Parallel processing framework + anomaly monitoring pipeline for production logs and decision workflows.
+      <a href="/projects/" class="module" style="display:block;text-decoration:none;">
+        <h3 style="margin-top:0;"><strong>TB-scale Data Platform</strong></h3>
+        <p class="small" style="margin:6px 0 10px 0;">
+          Parallel processing + orchestration for production logs; anomaly detection workflows.
         </p>
-        <div class="tags">
-          <span class="tag">automation</span>
-          <span class="tag">Python</span>
-          <span class="tag">Cloud</span>
-          <span class="tag">AWS</span>
-          <span class="tag">GCP</span>
-          <span class="tag">Dask</span>
-          <span class="tag">Airflow</span>
+        <div class="badges">
+          <span class="badge">Cloud</span><span class="badge">AWS</span><span class="badge">GCP</span><span class="badge">Airflow</span>
         </div>
-        <div class="card-actions">
-          <a class="btn" href="/projects/">Details →</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="card">
-        <h3>Project Alpha-Helix 🧬</h3>
-        <p class="small">
-          End-to-end quantitative research & trading system: data ingestion → research → dashboard (public version).
+      <a href="/projects/" class="module" style="display:block;text-decoration:none;">
+        <h3 style="margin-top:0;"><strong>Alpha-Helix (Open)</strong></h3>
+        <p class="small" style="margin:6px 0 10px 0;">
+          End-to-end quantitative research system: ingestion → signals → evaluation dashboards.
         </p>
-        <div class="tags">
-          <span class="tag">ML optimization</span>
-          <span class="tag">automation</span>
-          <span class="tag">Python</span>
-          <span class="tag">Cloud</span>
-          <span class="tag">AWS</span>
-          <span class="tag">GCP</span>
+        <div class="badges">
+          <span class="badge">Python</span><span class="badge">Cloud</span><span class="badge">Automation</span><span class="badge">Dash/Streamlit</span>
         </div>
-        <div class="card-actions">
-          <a class="btn" href="/projects/">Read more →</a>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="callouts" style="margin-top: 14px;">
-      <a class="btn" href="/projects/">View all Projects →</a>
-      <a class="btn btn-ghost" href="/research/">View Research →</a>
+      </a>
     </div>
   </section>
 
