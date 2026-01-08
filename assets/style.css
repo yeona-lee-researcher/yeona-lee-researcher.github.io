@@ -237,6 +237,13 @@ a, button, input[type="button"], input[type="submit"],
   opacity: .95;
 }
 
+.icon-svg.fill{
+  stroke:none;
+  fill: currentColor;
+  opacity:.95;
+}
+
+
 /* Tooltip */
 .icon-btn[data-tooltip]::after{
   content: attr(data-tooltip);
