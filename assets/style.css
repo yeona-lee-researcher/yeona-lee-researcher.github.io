@@ -147,37 +147,27 @@ a, button, input[type="button"], input[type="submit"],
 }
 
 
-/* =========================
-   Contact row + icon links
-   ========================= */
-
+/* ===== Email: click-to-copy (no Copy badge) ===== */
 .contact-row{
   display:flex;
   align-items:center;
   gap:8px;
   margin-top:8px;
-  font-size:14px;
-  color: var(--muted);
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
 .contact-row .dot{ color: var(--muted); }
 
 .copy-email{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
   color: var(--link);
   font-weight:600;
   cursor:pointer;
   user-select:none;
-  text-decoration: none;
-}
-
-.copy-email:hover{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.copy-email:hover{ opacity: .9; }
 
 .copy-email:focus{
   outline:2px solid var(--border);
@@ -185,16 +175,6 @@ a, button, input[type="button"], input[type="submit"],
   border-radius:10px;
 }
 
-.copy-badge{
-  font-size:12px;
-  padding:2px 8px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  color: #374151;
-  background:#fff;
-}
-
-/* "Copied!" toast next to email */
 .copy-toast{
   opacity:0;
   transform: translateY(-2px);
@@ -212,46 +192,52 @@ a, button, input[type="button"], input[type="submit"],
   transform: translateY(0);
 }
 
-/* Icon links row */
+/* ===== Icon buttons: no border, consistent size, better icons ===== */
 .icon-links{
   display:flex;
   align-items:center;
   gap:10px;
-  margin-top:8px;
+  margin-top:10px;
 }
 
 .icon-btn{
-  position:relative;
+  width:34px;
+  height:34px;
+  border:none;            /* remove outline border */
+  background:transparent; /* no box */
+  border-radius:12px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:34px;
-  height:34px;
-  border-radius:12px;
-  border:1px solid var(--border);
-  background:#fff;
   text-decoration:none;
   color:#111827;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  position:relative;
+  transition: background .12s ease, transform .12s ease;
 }
 
 .icon-btn:hover{
+  background: rgba(17,24,39,.06); /* subtle hover bubble */
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
 
 .icon-btn:active{
   transform: translateY(0);
 }
 
+/* same style & same size for both icons */
 .icon-svg{
-  width:18px;
-  height:18px;
-  fill: currentColor;
-  opacity:.9;
+  width:20px;
+  height:20px;
+  display:block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: .95;
 }
 
-/* Tooltip (hover) */
+/* Tooltip */
 .icon-btn[data-tooltip]::after{
   content: attr(data-tooltip);
   position:absolute;
@@ -296,3 +282,4 @@ a, button, input[type="button"], input[type="submit"],
 .icon-btn:hover::before{
   opacity:1;
 }
+
