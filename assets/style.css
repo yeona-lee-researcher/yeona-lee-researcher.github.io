@@ -146,10 +146,6 @@ a, button, input[type="button"], input[type="submit"],
   cursor: url("/assets/cursor/yeona_fist_cursor.cur"), pointer;
 }
 
-/* Email link: always use fist cursor (with hotspot) */
-.copy-email{
-  cursor: url("/assets/cursor/yeona_fist_cursor.cur") 12 4, pointer;
-}
 
 /* ===== Email: click-to-copy (no Copy badge) ===== */
 .contact-row{
@@ -165,10 +161,10 @@ a, button, input[type="button"], input[type="submit"],
 .copy-email{
   color: var(--link);
   font-weight:600;
-  cursor:pointer;
+  cursor:url("/assets/cursor/yeona_fist_cursor.cur") 12 4, pointer;
   user-select:none;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  /* text-decoration: underline; */
+  /* text-underline-offset: 3px; */
 }
 
 .copy-email:hover{ opacity: .9; }
