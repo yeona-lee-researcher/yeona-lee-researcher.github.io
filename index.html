@@ -75,15 +75,10 @@
           aria-label="LinkedIn"
           title="LinkedIn"
         >
-          <!-- clean line icon: linkedin -->
-          <!-- <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg> -->
-        <svg class="icon-svg fill" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0zM7.06 20.45H3.56V9h3.5v11.45zM5.31 7.43c-1.12 0-2.03-.92-2.03-2.05 0-1.13.91-2.05 2.03-2.05 1.13 0 2.04.92 2.04 2.05 0 1.13-.91 2.05-2.04 2.05zM20.45 20.45h-3.5v-5.56c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.65h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.84 3.33-1.84 3.56 0 4.2 2.34 4.2 5.39v6.34z"/>
-        </svg>  
+          <!-- filled linkedin icon -->
+          <svg class="icon-svg fill" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0zM7.06 20.45H3.56V9h3.5v11.45zM5.31 7.43c-1.12 0-2.03-.92-2.03-2.05 0-1.13.91-2.05 2.03-2.05 1.13 0 2.04.92 2.04 2.05 0 1.13-.91 2.05-2.04 2.05zM20.45 20.45h-3.5v-5.56c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.65h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.84 3.33-1.84 3.56 0 4.2 2.34 4.2 5.39v6.34z"/>
+          </svg>
         </a>
       </div>
 
@@ -195,40 +190,62 @@
     </div>
   </section>
 
+  <!-- CONTACT (inline, icons, consistent spacing) -->
   <section class="section">
     <h2>Contact</h2>
-    <p class="small contact-row">
-      <span>Email:</span>
 
+    <div class="contact-inline small" aria-label="Contact links">
+      <!-- Email (click-to-copy) -->
       <a
+        class="contact-pill copy-email"
         href="mailto:hylee132@gmail.com"
-        class="copy-email"
         data-email="hylee132@gmail.com"
-        aria-label="Click to copy email address (Shift+Click opens email app)"
         title="Click to copy (Shift+Click opens email app)"
+        aria-label="Email (click to copy)"
       >
-        hylee132@gmail.com
+        <!-- simple mail icon -->
+        <svg class="contact-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16v12H4z"></path>
+          <path d="M4 7l8 6 8-6"></path>
+        </svg>
+        <span>hylee132@gmail.com</span>
       </a>
 
+      <!-- Korean Blog -->
+      <a
+        class="contact-pill"
+        href="https://hyleeyou.tistory.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Korean Blog"
+        aria-label="Korean Blog"
+      >
+        <span class="emoji-ico" aria-hidden="true">💌</span>
+        <span>hyleeyou.tistory.com</span>
+      </a>
+
+      <!-- YouTube -->
+      <a
+        class="contact-pill"
+        href="https://www.youtube.com/@YOEN_LEE"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="YouTube"
+        aria-label="YouTube"
+      >
+        <!-- YouTube icon -->
+        <svg class="contact-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10 15V9l5 3-5 3Z"></path>
+          <path d="M21 12s0-3.5-.5-5a2.5 2.5 0 0 0-1.7-1.8C17.2 5 12 5 12 5s-5.2 0-6.8.2A2.5 2.5 0 0 0 3.5 7C3 8.5 3 12 3 12s0 3.5.5 5a2.5 2.5 0 0 0 1.7 1.8C6.8 19 12 19 12 19s5.2 0 6.8-.2a2.5 2.5 0 0 0 1.7-1.8c.5-1.5.5-5 .5-5Z"></path>
+        </svg>
+        <span>youtube.com/@YOEN_LEE</span>
+      </a>
+
+      <!-- Copy toast (shared) -->
       <span class="copy-toast" role="status" aria-live="polite">Copied!</span>
-    </p>
+    </div>
   </section>
 
-  <p class="small contact-row">
-    <span>Korean Blog:</span>
-    <a href="https://hyleeyou.tistory.com/" target="_blank" rel="noopener noreferrer">
-      hyleeyou.tistory.com
-    </a>
-  </p>
-
-  <p class="small contact-row">
-    <span>YouTube:</span>
-    <a href="https://www.youtube.com/@YEON_LEE" target="_blank" rel="noopener noreferrer">
-      youtube.com/@YEON_LEE
-    </a>
-  </p>
-
-  
   <div class="footer">© 2026 Hyoyeon (Yeona) Lee · Hosted on GitHub Pages</div>
 </main>
 
