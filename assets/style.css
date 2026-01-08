@@ -145,3 +145,154 @@ a, button, input[type="button"], input[type="submit"],
 [role="button"], .btn, .badge{
   cursor: url("/assets/cursor/yeona_fist_cursor.cur"), pointer;
 }
+
+
+/* =========================
+   Contact row + icon links
+   ========================= */
+
+.contact-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:8px;
+  font-size:14px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.contact-row .dot{ color: var(--muted); }
+
+.copy-email{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color: var(--link);
+  font-weight:600;
+  cursor:pointer;
+  user-select:none;
+  text-decoration: none;
+}
+
+.copy-email:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.copy-email:focus{
+  outline:2px solid var(--border);
+  outline-offset:3px;
+  border-radius:10px;
+}
+
+.copy-badge{
+  font-size:12px;
+  padding:2px 8px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  color: #374151;
+  background:#fff;
+}
+
+/* "Copied!" toast next to email */
+.copy-toast{
+  opacity:0;
+  transform: translateY(-2px);
+  transition: opacity .15s ease, transform .15s ease;
+  font-size:12px;
+  padding:2px 8px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:#fff;
+  color:#111827;
+}
+
+.copy-toast.show{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* Icon links row */
+.icon-links{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:8px;
+}
+
+.icon-btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:#fff;
+  text-decoration:none;
+  color:#111827;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.icon-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.icon-btn:active{
+  transform: translateY(0);
+}
+
+.icon-svg{
+  width:18px;
+  height:18px;
+  fill: currentColor;
+  opacity:.9;
+}
+
+/* Tooltip (hover) */
+.icon-btn[data-tooltip]::after{
+  content: attr(data-tooltip);
+  position:absolute;
+  left:50%;
+  top:-10px;
+  transform: translate(-50%, -100%);
+  font-size:12px;
+  padding:6px 8px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+  color:#111827;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  transition: opacity .12s ease, transform .12s ease;
+  z-index: 10;
+}
+
+.icon-btn[data-tooltip]::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-10px;
+  width:10px;
+  height:10px;
+  background:#fff;
+  border-left:1px solid var(--border);
+  border-top:1px solid var(--border);
+  transform: translateX(-50%) rotate(45deg);
+  opacity:0;
+  transition: opacity .12s ease;
+  z-index: 10;
+}
+
+.icon-btn:hover::after{
+  opacity:1;
+  transform: translate(-50%, -110%);
+}
+
+.icon-btn:hover::before{
+  opacity:1;
+}
