@@ -215,6 +215,11 @@ a, button, input[type="button"], input[type="submit"],
   transition: background .12s ease, transform .12s ease;
 }
 
+.icon-btn.linkedin:hover{
+  background: rgba(37,99,235,.10);
+}
+
+
 .icon-btn:hover{
   background: rgba(17,24,39,.06); /* subtle hover bubble */
   transform: translateY(-1px);
