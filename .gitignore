@@ -1,0 +1,10 @@
+# Large video files
+*.mp4
+projects/aibe5Frontend/src/assets/*.mp4
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/

@@ -438,6 +438,7 @@ const spotMap = {
 ```
 
 **API Request Example**:
+{% raw %}
 ```javascript
 // Add schedule
 fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events`, {
@@ -451,6 +452,7 @@ fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events`, 
   })
 })
 ```
+{% endraw %}
 
 ---
 
@@ -752,6 +754,7 @@ return diffDays >= 0 && diffDays <= 3;
 **Feature**: Real-time weather for 8 major cities nationwide
 
 **API**: OpenWeather API
+{% raw %}
 ```javascript
 const url = `https://api.openweathermap.org/data/2.5/weather
   ?lat=${lat}&lon=${lon}
@@ -759,6 +762,7 @@ const url = `https://api.openweathermap.org/data/2.5/weather
   &units=metric
   &lang=kr`;
 ```
+{% endraw %}
 
 **Displayed Information**:
 - Temperature (°C)
@@ -1124,6 +1128,7 @@ export function cn(...inputs) {
 4. State-based styles (Hover, etc.)
 
 **Example**:
+{% raw %}
 ```jsx
 <div
   style={{
@@ -1133,6 +1138,7 @@ export function cn(...inputs) {
   onMouseEnter={() => setIsHovered(true)}
 />
 ```
+{% endraw %}
 
 ---
 
@@ -1282,6 +1288,7 @@ DELETE https://www.googleapis.com/calendar/v3/calendars/primary/events/{eventId}
 
 #### **Authentication Flow**
 1. **Request Authorization Code**:
+{% raw %}
 ```javascript
 const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize
   ?client_id=${KAKAO_REST_KEY}
@@ -1291,6 +1298,7 @@ const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize
 
 window.location.assign(kakaoAuthUrl);
 ```
+{% endraw %}
 
 2. **Callback Handling** (OAuthKakaoCallback.jsx):
 ```javascript
@@ -1346,6 +1354,7 @@ const response = await fetch("https://generativelanguage.googleapis.com/v1/model
   })
 });
 ```
+{% endraw %}
 
 ---
 
