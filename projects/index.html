@@ -6,7 +6,7 @@
 <body>
 <header class="header"><div class="container header-inner">
   <a class="brand" href="/">Hyoyeon (Yeona) Lee</a>
-  <nav class="nav"><a href="/about/">About</a><a href="/research/">Research</a><a href="/teaching/">Teaching</a><a href="/projects/">Projects</a><a href="/news/">News</a><a href="/cv/">CV</a></nav>
+  <nav class="nav"><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/research/">Research</a><a href="/teaching/">Teaching</a><a href="/news/">News</a><a href="/cv/">CV</a></nav>
 </div></header>
 <main class="container main">
 <h1>Projects</h1>
@@ -112,13 +112,56 @@
     </ul>
   </div>
 
+  <div class="module">
+    <h3><strong>Development Highlights</strong></h3>
+    <ul>
+      <li><strong>Modern Build Tooling:</strong> Vite 7.x provides instant HMR and optimized production builds with code splitting and tree shaking</li>
+      <li><strong>Component Architecture:</strong> Custom reusable components (TownCard, WeatherWidget, Header variants) following single responsibility principle</li>
+      <li><strong>Advanced State Management:</strong> Zustand with localStorage persistence for user preferences, liked festivals, and taste test results</li>
+      <li><strong>API Integration Patterns:</strong> Comprehensive OAuth 2.0 flows (Google, Kakao), RESTful API consumption, and real-time data fetching</li>
+      <li><strong>Performance Optimization:</strong> React.memo, useMemo, useCallback for render optimization; lazy loading for route-based code splitting</li>
+      <li><strong>CSS Architecture:</strong> Tailwind CSS with custom theme configuration, responsive breakpoints (sm/md/lg/xl), and utility-first approach</li>
+      <li><strong>User Experience:</strong> Accessibility considerations, loading states, error boundaries, and smooth animations using CSS transitions</li>
+      <li><strong>Development Workflow:</strong> ESLint configuration, component-based file structure, clear separation of concerns (components/pages/data/lib)</li>
+    </ul>
+  </div>
+
+  <div class="module">
+    <h3><strong>Technical Implementation Details</strong></h3>
+    <p><strong>Google Calendar Integration:</strong></p>
+    <ul>
+      <li>OAuth 2.0 authentication flow with @react-oauth/google library</li>
+      <li>Full CRUD operations on calendar events using Google Calendar API v3</li>
+      <li>Token management and refresh handling</li>
+    </ul>
+    
+    <p style="margin-top: 1rem;"><strong>Map & Location Features:</strong></p>
+    <ul>
+      <li>Google Maps JavaScript API with @googlemaps/js-api-loader</li>
+      <li>Custom markers for festival locations with info windows</li>
+      <li>Places API integration for nearby accommodation search</li>
+      <li>Geolocation-based user positioning</li>
+    </ul>
+
+    <p style="margin-top: 1rem;"><strong>AI-Powered Recommendations:</strong></p>
+    <ul>
+      <li>7-question taste test analyzing user preferences across multiple dimensions</li>
+      <li>Preference-based festival matching algorithm</li>
+      <li>Personalized curation with multi-day trip planning capabilities</li>
+    </ul>
+
+    <p style="margin-top: 1rem;"><strong>Data Management:</strong></p>
+    <ul>
+      <li>JSON-based festival data with comprehensive metadata (dates, locations, categories, prices)</li>
+      <li>Client-side filtering and search with real-time updates</li>
+      <li>LocalStorage for persistent user data across sessions</li>
+    </ul>
+  </div>
+
   <p style="margin-top: 2rem;">
-    <a href="/projects/aibe5Frontend/read_frontend_skill_en.txt" 
-       target="_blank" 
-       style="color: #2563eb; text-decoration: underline;">📄 View Complete Technical Documentation</a><br>
     <a href="https://github.com/yeona-lee-researcher/yeona-lee-researcher.github.io/tree/main/projects/aibe5Frontend" 
        target="_blank" 
-       style="color: #2563eb; text-decoration: underline;">📁 Browse Source Code</a>
+       style="color: #2563eb; text-decoration: underline; font-weight: 500;">📁 View Source Code on GitHub →</a>
   </p>
 </section>
 
