@@ -1,0 +1,6 @@
+.festival-card-custom:hover {
+  box-shadow: 0 0 0 3px #FFA500, 0 0 0 7px #FFD700;
+  border: none !important;
+  transition: box-shadow 0.3s;
+  border-radius: 0.75rem;
+}
