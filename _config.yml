@@ -1,0 +1,6 @@
+# Exclude files from Jekyll processing
+exclude:
+  - projects/aibe5Frontend/read_frontend_skill_en.txt
+  - projects/aibe5Frontend/read_frontend_skill_en.md
+  - .gitignore
+  - README.md
