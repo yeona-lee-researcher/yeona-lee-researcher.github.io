@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # 🎊 Festory Project - Complete Technical Stack & Architecture Analysis
 
 ## 📋 Table of Contents
