@@ -23,7 +23,7 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
   background-clip: text;
 }
 .nav a{
-  margin-left:16px;
+  margin-left:8px;
   color:#374151;
   font-weight:600;
   padding: 6px 12px;
