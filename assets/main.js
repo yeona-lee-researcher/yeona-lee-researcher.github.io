@@ -51,3 +51,18 @@
     }
   });
 })();
+
+// Project Carousel Navigation
+function scrollCarousel(direction) {
+  const carousel = document.getElementById('projectCarousel');
+  if (!carousel) return;
+  
+  const cardWidth = carousel.querySelector('.carousel-card').offsetWidth;
+  const gap = 14;
+  const scrollAmount = (cardWidth + gap) * direction;
+  
+  carousel.scrollBy({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+}

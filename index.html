@@ -153,40 +153,64 @@
     <h2>Selected Projects</h2>
     <p class="disclosure">Project details and demos are organized on the <a href="/projects/">Projects</a> page. </p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
-      <a href="/projects/" class="module" style="display:block;text-decoration:none;">
-        <h3 style="margin-top:0;"><strong>DRAM ML Optimization &amp; Automation</strong></h3>
-        <p class="small" style="margin:6px 0 10px 0;">
-          Production-grade optimization + automation pipeline for high-volume test streams.
-        </p>
-        <p class="disclosure">Company-internal project; details are omitted due to confidentiality.</p>
-        <div class="badges">
-          <span class="badge">ML optimization</span><span class="badge">Automation</span><span class="badge">Python</span><span class="badge">C/C++</span>
-          <span class="badge">Linux</span>
-        </div>
-      </a>
+    <div style="position: relative; overflow: hidden; padding: 0 40px;">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel(-1)" aria-label="Previous project">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      
+      <div class="project-carousel" id="projectCarousel">
+        <a href="/projects/#festory" class="module carousel-card" style="display:block;text-decoration:none;">
+          <h3 style="margin-top:0;"><strong>☀️ Festory - Festival Travel Website</strong></h3>
+          <p class="small" style="margin:6px 0 10px 0;">
+            AI-powered festival recommendation platform with Google Maps/Calendar integration and real-time weather.
+          </p>
+          <div class="badges">
+            <span class="badge">React 19</span><span class="badge">Vite</span><span class="badge">Tailwind CSS</span>
+            <span class="badge">Google OAuth</span><span class="badge">Zustand</span>
+          </div>
+        </a>
 
-      <a href="/projects/" class="module" style="display:block;text-decoration:none;">
-        <h3 style="margin-top:0;"><strong>TB-scale Data Platform</strong></h3>
-        <p class="small" style="margin:6px 0 10px 0;">
-          Parallel processing + orchestration for production logs; anomaly detection workflows.
-        </p>
-        <p class="disclosure">Company-internal project; details are omitted due to confidentiality.</p>
+        <a href="/projects/" class="module carousel-card" style="display:block;text-decoration:none;">
+          <h3 style="margin-top:0;"><strong>DRAM ML Optimization &amp; Automation</strong></h3>
+          <p class="small" style="margin:6px 0 10px 0;">
+            Production-grade optimization + automation pipeline for high-volume test streams.
+          </p>
+          <p class="disclosure">Company-internal project; details are omitted due to confidentiality.</p>
+          <div class="badges">
+            <span class="badge">ML optimization</span><span class="badge">Automation</span><span class="badge">Python</span><span class="badge">C/C++</span>
+            <span class="badge">Linux</span>
+          </div>
+        </a>
 
-        <div class="badges">
-          <span class="badge">Cloud</span><span class="badge">AWS</span><span class="badge">GCP</span><span class="badge">Airflow</span>
-        </div>
-      </a>
+        <a href="/projects/" class="module carousel-card" style="display:block;text-decoration:none;">
+          <h3 style="margin-top:0;"><strong>TB-scale Data Platform</strong></h3>
+          <p class="small" style="margin:6px 0 10px 0;">
+            Parallel processing + orchestration for production logs; anomaly detection workflows.
+          </p>
+          <p class="disclosure">Company-internal project; details are omitted due to confidentiality.</p>
+          <div class="badges">
+            <span class="badge">Cloud</span><span class="badge">AWS</span><span class="badge">GCP</span><span class="badge">Airflow</span>
+          </div>
+        </a>
 
-      <a href="/projects/" class="module" style="display:block;text-decoration:none;">
-        <h3 style="margin-top:0;"><strong>Alpha-Helix (In Progress)</strong></h3>
-        <p class="small" style="margin:6px 0 10px 0;">
-          End-to-end quantitative research system: ingestion → signals → evaluation dashboards.
-        </p>
-        <div class="badges">
-          <span class="badge">Python</span><span class="badge">Cloud</span><span class="badge">Automation</span><span class="badge">Dash/Streamlit</span>
-        </div>
-      </a>
+        <a href="/projects/#alpha-helix" class="module carousel-card" style="display:block;text-decoration:none;">
+          <h3 style="margin-top:0;"><strong>🧬 Alpha-Helix (In Progress)</strong></h3>
+          <p class="small" style="margin:6px 0 10px 0;">
+            End-to-end quantitative research system: ingestion → signals → evaluation dashboards.
+          </p>
+          <div class="badges">
+            <span class="badge">Python</span><span class="badge">Cloud</span><span class="badge">Automation</span><span class="badge">Dash/Streamlit</span>
+          </div>
+        </a>
+      </div>
+
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel(1)" aria-label="Next project">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
     </div>
   </section>
 
