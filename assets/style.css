@@ -366,12 +366,13 @@ a, button, input[type="button"], input[type="submit"],
 /* Project Carousel */
 .project-carousel {
   display: flex;
-  gap: 14px;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  padding: 10px 0;
 }
 
 .project-carousel::-webkit-scrollbar {
@@ -379,50 +380,52 @@ a, button, input[type="button"], input[type="submit"],
 }
 
 .carousel-card {
-  min-width: 280px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 280px;
   flex: 0 0 auto;
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.95);
+.carousel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.carousel-nav-btn {
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: var(--fg);
 }
 
-.carousel-btn:hover {
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-prev {
-  left: 0;
-}
-
-.carousel-next {
-  right: 0;
+.carousel-nav-btn:hover {
+  background: rgba(186, 230, 253, 0.5);
+  color: #1428a0;
+  border-color: #60a5fa;
 }
 
 @media(max-width: 760px) {
-  .carousel-btn {
-    display: none;
+  .carousel-nav-btn {
+    width: 32px;
+    height: 32px;
   }
   
   .carousel-card {
-    min-width: 260px;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 260px;
   }
 }
 
