@@ -363,5 +363,68 @@ a, button, input[type="button"], input[type="submit"],
   opacity:1;
 }
 
+/* Project Carousel */
+.project-carousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  min-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-btn:hover {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+@media(max-width: 760px) {
+  .carousel-btn {
+    display: none;
+  }
+  
+  .carousel-card {
+    min-width: 260px;
+  }
+}
+
 
 
