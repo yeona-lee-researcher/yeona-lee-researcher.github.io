@@ -11,7 +11,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"] {
   cursor: url('/assets/cursor/yeona_fist_cursor.cur'), pointer !important;
 }
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-.container{width:min(1000px,92vw);margin:0 auto}
+.container{width:min(1200px,92vw);margin:0 auto}
 .header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:9}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
 .brand{
@@ -382,7 +382,6 @@ a, button, input[type="button"], input[type="submit"],
 .carousel-card {
   min-width: 300px;
   max-width: 300px;
-  min-height: 280px;
   flex: 0 0 auto;
   scroll-snap-align: start;
   display: flex;
@@ -425,7 +424,6 @@ a, button, input[type="button"], input[type="submit"],
   .carousel-card {
     min-width: 280px;
     max-width: 280px;
-    min-height: 260px;
   }
 }
 
