@@ -87,9 +87,8 @@
 
   <section class="section">
     <p>
-      Hi, I'm <strong>Hyoyeon Lee</strong>.
-      I build end-to-end data & ML systems for semiconductor and finance.
-      My interests include decision-making, optimization, robust/trustworthy ML, and quantitative research.
+      안녕하세요, <strong>이효연</strong>입니다.
+      저는 엔드투엔드 데이터 및 머신러닝 시스템, 의사결정, 최적화, 견고하고 신뢰할 수 있는 머신러닝, 그리고 양적 연구에 관심이 있습니다.
     </p>
   </section>
 
@@ -150,25 +149,11 @@
 
   <!-- SELECTED PROJECTS -->
   <section class="section">
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-      <h2 style="margin: 0;">Selected Projects</h2>
-      <div style="display: flex; gap: 8px;">
-        <button class="carousel-nav-btn" onclick="scrollCarousel('selected', -1)" aria-label="Previous project">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </button>
-        <button class="carousel-nav-btn" onclick="scrollCarousel('selected', 1)" aria-label="Next project">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </button>
-      </div>
-    </div>
+    <h2>Selected Projects</h2>
     <p class="disclosure">Project details and demos are organized on the <a href="/projects/">Projects</a> page.</p>
 
-    <div class="project-carousel" id="selectedCarousel">
-      <a href="/projects/#alpha-helix" class="module carousel-card">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:16px; margin-top:1.2rem;">
+      <a href="/projects/#alpha-helix" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
         <h3 style="margin-top:0;">
           <strong style="background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🧬 Alpha-Helix</strong>
         </h3>
@@ -176,11 +161,24 @@
           AI quant investment workspace (AIBE5 Team 2). 7-strategy vectorbt backtester → QuantStats tearsheet → XGBoost+SHAP signal engine → 5-state HMM regime detection → OrderProposal MOCK→REAL KIS live trading gate. Gemini 2.5-flash daily briefing. Toss Payments subscription. 3-process EC2 deployment.
         </p>
         <div class="badges">
-          <span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">vectorbt</span><span class="badge">XGBoost</span><span class="badge">SHAP</span><span class="badge">Spring Boot 4</span><span class="badge">Java 21</span><span class="badge">React 18</span><span class="badge">Tailwind 4</span><span class="badge">Gemini 2.5</span><span class="badge">KIS API</span><span class="badge">Toss Payments</span><span class="badge">MySQL 8</span><span class="badge">AWS EC2</span>
+          <span class="badge">Python</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">vectorbt</span>
+          <span class="badge">XGBoost</span>
+          <span class="badge">SHAP</span>
+          <span class="badge">Spring Boot 4</span>
+          <span class="badge">Java 21</span>
+          <span class="badge">React 18</span>
+          <span class="badge">Tailwind 4</span>
+          <span class="badge">Gemini 2.5</span>
+          <span class="badge">KIS API</span>
+          <span class="badge">Toss Payments</span>
+          <span class="badge">MySQL 8</span>
+          <span class="badge">AWS EC2</span>
         </div>
       </a>
 
-      <a href="/projects/#devbridge" class="module carousel-card">
+      <a href="/projects/#devbridge" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
         <h3 style="margin-top:0;">
           <strong style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🌉 DevBridge</strong>
         </h3>
@@ -188,11 +186,18 @@
           AI freelancer ↔ client matching platform. Gemini 2.0 Flash ranks top-N matches from free-text queries + filters. Full project lifecycle: proposal → 7-step contract → milestone escrow → review. JWT HttpOnly auth, Stream Chat, 32-table schema, 38 frontend routes.
         </p>
         <div class="badges">
-          <span class="badge">Spring Boot 3</span><span class="badge">Java 17</span><span class="badge">React 19</span><span class="badge">Gemini 2.0</span><span class="badge">MySQL 8</span><span class="badge">Stream Chat</span><span class="badge">JWT</span><span class="badge">AWS EC2</span>
+          <span class="badge">Spring Boot 3</span>
+          <span class="badge">Java 17</span>
+          <span class="badge">React 19</span>
+          <span class="badge">Gemini 2.0</span>
+          <span class="badge">MySQL 8</span>
+          <span class="badge">Stream Chat</span>
+          <span class="badge">JWT</span>
+          <span class="badge">AWS EC2</span>
         </div>
       </a>
 
-      <a href="/projects/#festory" class="module carousel-card">
+      <a href="/projects/#festory" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
         <h3 style="margin-top:0;">
           <strong style="background: linear-gradient(135deg, #ff6b35 0%, #f7b731 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">☀️ Festory</strong>
         </h3>
@@ -200,7 +205,13 @@
           AI-powered Korean festival discovery app. Location-aware recommendations on Google Maps with live weather overlay, one-click Google Calendar sync, and OAuth 2.0 authentication.
         </p>
         <div class="badges">
-          <span class="badge">React 19</span><span class="badge">Vite</span><span class="badge">Tailwind CSS</span><span class="badge">Zustand</span><span class="badge">Google Maps API</span><span class="badge">Google Calendar API</span><span class="badge">Google OAuth</span>
+          <span class="badge">React 19</span>
+          <span class="badge">Vite</span>
+          <span class="badge">Tailwind CSS</span>
+          <span class="badge">Zustand</span>
+          <span class="badge">Google Maps API</span>
+          <span class="badge">Google Calendar API</span>
+          <span class="badge">Google OAuth</span>
         </div>
       </a>
     </div>
