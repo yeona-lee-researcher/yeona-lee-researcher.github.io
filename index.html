@@ -208,47 +208,40 @@
 
   <!-- COMPANY PROJECTS -->
   <section class="section">
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-      <h2 style="margin: 0;">Company Projects</h2>
-      <div style="display: flex; gap: 8px;">
-        <button class="carousel-nav-btn" onclick="scrollCarousel('company', -1)" aria-label="Previous project">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </button>
-        <button class="carousel-nav-btn" onclick="scrollCarousel('company', 1)" aria-label="Next project">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </button>
-      </div>
-    </div>
+    <h2>Company Projects</h2>
     <p class="disclosure">Company-internal projects; details are omitted due to confidentiality.</p>
 
-    <div class="project-carousel" id="companyCarousel">
-      <a href="/projects/" class="module carousel-card">
-        <h3 style="margin-top:0; display: flex; align-items: center; gap: 6px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:16px; margin-top:1.2rem;">
+      <a href="/projects/" class="module" style="margin:0; color:inherit;">
+        <h3 style="margin-top:0; display:flex; align-items:center; gap:6px;">
           <strong>DRAM ML Optimization</strong>
-          <img src="/assets/img/samsung-wordmark.png" alt="Samsung" style="height: 12px; opacity: 0.6; vertical-align: baseline;">
+          <img src="/assets/img/samsung-wordmark.png" alt="Samsung" style="height:12px; opacity:0.6; vertical-align:baseline;">
         </h3>
-        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
-          Production-grade optimization + automation pipeline for high-volume test streams.
+        <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+          Production-grade optimization + automation pipeline for high-volume DRAM test streams. Achieved record-high yields on new products.
         </p>
         <div class="badges">
-          <span class="badge">ML optimization</span><span class="badge">Automation</span><span class="badge">Python</span>
+          <span class="badge">ML optimization</span>
+          <span class="badge">Automation</span>
+          <span class="badge">Python</span>
+          <span class="badge">C/C++</span>
         </div>
       </a>
 
-      <a href="/projects/" class="module carousel-card">
-        <h3 style="margin-top:0; display: flex; align-items: center; gap: 6px;">
+      <a href="/projects/" class="module" style="margin:0; color:inherit;">
+        <h3 style="margin-top:0; display:flex; align-items:center; gap:6px;">
           <strong>TB-scale Data Platform</strong>
-          <img src="/assets/img/samsung-wordmark.png" alt="Samsung" style="height: 12px; opacity: 0.6; vertical-align: baseline;">
+          <img src="/assets/img/samsung-wordmark.png" alt="Samsung" style="height:12px; opacity:0.6; vertical-align:baseline;">
         </h3>
-        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
-          Parallel processing + orchestration for production logs; anomaly detection workflows.
+        <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+          Parallel processing + orchestration for production logs; automated anomaly detection workflows at TB scale.
         </p>
         <div class="badges">
-          <span class="badge">Cloud</span><span class="badge">AWS</span><span class="badge">GCP</span><span class="badge">Airflow</span>
+          <span class="badge">Cloud</span>
+          <span class="badge">AWS</span>
+          <span class="badge">GCP</span>
+          <span class="badge">Airflow</span>
+          <span class="badge">Dask</span>
         </div>
       </a>
     </div>
