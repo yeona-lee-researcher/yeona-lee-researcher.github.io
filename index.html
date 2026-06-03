@@ -148,26 +148,84 @@
     </p>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- SELECTED PROJECTS -->
   <section class="section">
     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
       <h2 style="margin: 0;">Selected Projects</h2>
       <div style="display: flex; gap: 8px;">
-        <button class="carousel-nav-btn" onclick="scrollCarousel(-1)" aria-label="Previous project">
+        <button class="carousel-nav-btn" onclick="scrollCarousel('selected', -1)" aria-label="Previous project">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M15 18l-6-6 6-6"/>
           </svg>
         </button>
-        <button class="carousel-nav-btn" onclick="scrollCarousel(1)" aria-label="Next project">
+        <button class="carousel-nav-btn" onclick="scrollCarousel('selected', 1)" aria-label="Next project">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M9 18l6-6-6-6"/>
           </svg>
         </button>
       </div>
     </div>
-    <p class="disclosure">Project details and demos are organized on the <a href="/projects/">Projects</a> page. </p>
+    <p class="disclosure">Project details and demos are organized on the <a href="/projects/">Projects</a> page.</p>
 
-    <div class="project-carousel" id="projectCarousel">
+    <div class="project-carousel" id="selectedCarousel">
+      <a href="/projects/#alpha-helix" class="module carousel-card">
+        <h3 style="margin-top:0;">
+          <strong style="background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🧬 Alpha-Helix</strong>
+        </h3>
+        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
+          End-to-end quantitative research system: ingestion → signals → evaluation dashboards.
+        </p>
+        <div class="badges">
+          <span class="badge">Python</span><span class="badge">Airflow</span><span class="badge">Redis</span><span class="badge">Dash/Streamlit</span>
+        </div>
+      </a>
+
+      <a href="/projects/#devbridge" class="module carousel-card">
+        <h3 style="margin-top:0;">
+          <strong style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🌉 DevBridge</strong>
+        </h3>
+        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
+          Developer Q&amp;A community platform (Stack Overflow–style). Full-stack team project.
+        </p>
+        <div class="badges">
+          <span class="badge">Spring Boot</span><span class="badge">React</span><span class="badge">MySQL</span><span class="badge">AWS EC2</span>
+        </div>
+      </a>
+
+      <a href="/projects/#festory" class="module carousel-card">
+        <h3 style="margin-top:0;">
+          <strong style="background: linear-gradient(135deg, #ff6b35 0%, #f7b731 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">☀️ Festory</strong>
+        </h3>
+        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
+          AI-powered festival recommendation platform with Google Maps/Calendar integration and real-time weather.
+        </p>
+        <div class="badges">
+          <span class="badge">React 19</span><span class="badge">Vite</span><span class="badge">Tailwind CSS</span><span class="badge">Google OAuth</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- COMPANY PROJECTS -->
+  <section class="section">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+      <h2 style="margin: 0;">Company Projects</h2>
+      <div style="display: flex; gap: 8px;">
+        <button class="carousel-nav-btn" onclick="scrollCarousel('company', -1)" aria-label="Previous project">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="carousel-nav-btn" onclick="scrollCarousel('company', 1)" aria-label="Next project">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <p class="disclosure">Company-internal projects; details are omitted due to confidentiality.</p>
+
+    <div class="project-carousel" id="companyCarousel">
       <a href="/projects/" class="module carousel-card">
         <h3 style="margin-top:0; display: flex; align-items: center; gap: 6px;">
           <strong>DRAM ML Optimization</strong>
@@ -176,7 +234,6 @@
         <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
           Production-grade optimization + automation pipeline for high-volume test streams.
         </p>
-        <p class="disclosure" style="font-size: 11px;">Company-internal project; details are omitted due to confidentiality.</p>
         <div class="badges">
           <span class="badge">ML optimization</span><span class="badge">Automation</span><span class="badge">Python</span>
         </div>
@@ -190,34 +247,8 @@
         <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
           Parallel processing + orchestration for production logs; anomaly detection workflows.
         </p>
-        <p class="disclosure" style="font-size: 11px;">Company-internal project; details are omitted due to confidentiality.</p>
         <div class="badges">
           <span class="badge">Cloud</span><span class="badge">AWS</span><span class="badge">GCP</span><span class="badge">Airflow</span>
-        </div>
-      </a>
-
-      <a href="/projects/#festory" class="module carousel-card">
-        <h3 style="margin-top:0;">
-          <strong style="background: linear-gradient(135deg, #ff6b35 0%, #f7b731 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">☀️ Festory - Festival Travel Website</strong>
-        </h3>
-        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
-          AI-powered festival recommendation platform with Google Maps/Calendar integration and real-time weather.
-        </p>
-        <div class="badges">
-          <span class="badge">React 19</span><span class="badge">Vite</span><span class="badge">Tailwind CSS</span>
-          <span class="badge">Google OAuth</span><span class="badge">Zustand</span>
-        </div>
-      </a>
-
-      <a href="/projects/#alpha-helix" class="module carousel-card">
-        <h3 style="margin-top:0;">
-          <strong style="background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🧬 Alpha-Helix - Prompt-to-Portfolio Quant System</strong>
-        </h3>
-        <p class="small" style="margin:6px 0 10px 0; color: #4a5568;">
-          End-to-end quantitative research system: ingestion → signals → evaluation dashboards.
-        </p>
-        <div class="badges">
-          <span class="badge">Python</span><span class="badge">Cloud</span><span class="badge">Automation</span><span class="badge">Dash/Streamlit</span>
         </div>
       </a>
     </div>

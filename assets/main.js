@@ -53,8 +53,9 @@
 })();
 
 // Project Carousel Navigation
-function scrollCarousel(direction) {
-  const carousel = document.getElementById('projectCarousel');
+function scrollCarousel(carouselId, direction) {
+  const id = (typeof carouselId === 'string') ? carouselId + 'Carousel' : 'selectedCarousel';
+  const carousel = document.getElementById(id);
   if (!carousel) return;
   
   const cardWidth = carousel.querySelector('.carousel-card').offsetWidth;
