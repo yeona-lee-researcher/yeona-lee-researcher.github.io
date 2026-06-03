@@ -548,5 +548,23 @@ a, button, input[type="button"], input[type="submit"],
   .proj-tab { font-size: 13px; padding: 8px 14px; }
 }
 
+/* ===== Skills Grid ===== */
+.skills-grid { display: flex; flex-direction: column; gap: 0; margin-top: 0.5rem; }
+.skill-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.skill-row:last-child { border-bottom: none; }
+.skill-label { font-size: 13px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+.skill-val { font-size: 14px; color: var(--text); line-height: 1.6; }
+@media(max-width: 600px) {
+  .skill-row { grid-template-columns: 1fr; gap: 2px; }
+  .skill-label { font-size: 12px; }
+}
+
 
 
