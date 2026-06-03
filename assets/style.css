@@ -552,7 +552,6 @@ a, button, input[type="button"], input[type="submit"],
 }
 
 .proj-video-wrap { display: flex; flex-direction: column; gap: 8px; }
-.proj-video-wrap .proj-video { flex: 1; }
 .proj-site-btn {
   display: inline-flex;
   align-items: center;
