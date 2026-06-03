@@ -109,11 +109,12 @@
         </strong>
       </h3>
       <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
-        Developer Q&amp;A community platform (Stack Overflow–style). Full-stack team project built with Spring Boot + React.
+        Freelancer ↔ client AI matching platform. Gemini 2.0 Flash scoring, full project lifecycle, milestone escrow, Stream Chat, 32-table schema.
       </p>
       <div class="badges">
-        <span class="badge">Spring Boot</span>
-        <span class="badge">React</span>
+        <span class="badge">Spring Boot 3</span>
+        <span class="badge">React 19</span>
+        <span class="badge">Gemini AI</span>
         <span class="badge">MySQL</span>
         <span class="badge">AWS EC2</span>
       </div>
@@ -191,19 +192,39 @@
      DETAIL: DEVBRIDGE
 ──────────────────────────────────────────── -->
 <section class="section" id="devbridge">
-  <h2>🌉<strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">DevBridge</strong> <span style="color:#10b981;">- Developer Q&amp;A Community Platform</span></h2>
-  <p class="disclosure">Team project · Full-stack web application</p>
+  <h2>🌉<strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">DevBridge</strong> <span style="color:#10b981;">- Freelancer × Client AI Matching Platform</span></h2>
+  <p class="disclosure">Team project (AIBE5 Team 2) · Full-stack web application · Spring Boot + React 19</p>
 
-  <p>A Stack Overflow–style Q&amp;A platform built for developers to ask questions, share knowledge, and connect with peers. Designed and developed as a full-stack team project with a focus on scalability and clean architecture.</p>
+  <p>A platform that matches freelancers and clients using natural language queries combined with structured filters. Powered by Google Gemini 2.0 Flash for AI-based match scoring, with a full project lifecycle from discovery to contract, milestone tracking, and escrow settlement.</p>
+
+  <div style="margin:2rem 0; text-align:center;">
+    <iframe
+      src="https://drive.google.com/file/d/1AAkACCmj64pFaYbxvrxdscJPjc_cY2fz/preview"
+      width="800" height="450"
+      style="max-width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"
+      allow="autoplay" allowfullscreen>
+    </iframe>
+    <p style="margin-top:0.5rem; font-size:0.9rem;">
+      <a href="https://drive.google.com/file/d/1AAkACCmj64pFaYbxvrxdscJPjc_cY2fz/view?usp=sharing"
+         target="_blank"
+         style="color:#2563eb; text-decoration:underline;">
+        🎬 Watch full video on Google Drive
+      </a>
+    </p>
+  </div>
 
   <div class="module">
     <h3 style="color:#1e40af;"><strong>Core Features</strong></h3>
     <ul>
-      <li><strong>Q&amp;A System:</strong> Post questions with rich-text editor, accept answers, vote on content</li>
-      <li><strong>Tag-based Discovery:</strong> Categorize and filter questions by technology tags</li>
-      <li><strong>User Authentication:</strong> JWT-based login/signup with role management</li>
-      <li><strong>Real-time Notifications:</strong> Notify users on answers and comments</li>
-      <li><strong>Search:</strong> Full-text search across questions and answers</li>
+      <li><strong>AI Matching:</strong> Google Gemini 2.0 Flash scores partner/client/project compatibility from natural language search queries; falls back to rule-based scoring when API key is absent</li>
+      <li><strong>Search &amp; Discovery:</strong> Partner, client, and project search with skill/field/budget/level filters; 1,000-record seeded dataset with N+1 optimized batch loading (3,001 → 4 queries)</li>
+      <li><strong>Project Lifecycle:</strong> Full application state machine — APPLIED → ACCEPTED/REJECTED → CONTRACTED → IN_PROGRESS → COMPLETED</li>
+      <li><strong>Milestone &amp; Escrow:</strong> Milestone lifecycle (PENDING → IN_PROGRESS → SUBMITTED → APPROVED/REVISION_REQUESTED) with automatic escrow release on approval</li>
+      <li><strong>7-Module Contract Negotiation:</strong> scope / deliverable / schedule / payment / revision / completion / terms — dual-accept pattern per module</li>
+      <li><strong>Stream Chat:</strong> Three room types — DM, NEGOTIATION, PROJECT_MEETING — via Stream Chat Java SDK</li>
+      <li><strong>Portfolio Management:</strong> Project-based or free-form portfolios with public/private visibility control</li>
+      <li><strong>Integrated Dashboard:</strong> Schedule (FullCalendar), applications, meetings, project management, evaluation, and portfolio tabs for both partner and client roles</li>
+      <li><strong>Bank Verification:</strong> 1-won mock auth with SecureRandom, 5-min TTL, 5-attempt limit, atomic ConcurrentHashMap processing</li>
     </ul>
   </div>
 
@@ -211,19 +232,31 @@
     <h3 style="color:#1e40af;"><strong>Technical Stack</strong></h3>
     <p><em>Backend:</em></p>
     <ul>
-      <li><strong>Spring Boot:</strong> RESTful API server with layered architecture</li>
-      <li><strong>Spring Security + JWT:</strong> Stateless authentication and authorization</li>
-      <li><strong>MySQL / JPA:</strong> Relational data modeling with Hibernate ORM</li>
+      <li><strong>Spring Boot 3.4.0 / Java 17:</strong> 22 REST controllers, layered architecture (controller → service → repository)</li>
+      <li><strong>JWT (HS256, 24h TTL):</strong> HttpOnly cookie delivery; <code>JwtAuthenticationFilter</code> cookie-first with Authorization header fallback — XSS token theft blocked</li>
+      <li><strong>MySQL 8 / JPA / Hibernate:</strong> 32-table schema, batch IN queries + JOIN FETCH for N+1 elimination</li>
+      <li><strong>Google Gemini 2.0 Flash:</strong> AI match scoring (rule-based fallback when key absent)</li>
     </ul>
     <p><em>Frontend:</em></p>
     <ul>
-      <li><strong>React:</strong> Component-based SPA with React Router</li>
-      <li><strong>Axios:</strong> HTTP client for REST API communication</li>
+      <li><strong>React 19 (Vite):</strong> 38 routes, component-based SPA, React Error Boundary at root</li>
+      <li><strong>Zustand (persist):</strong> loginUser, interests, profileDetail state with localStorage persistence</li>
+      <li><strong>Axios + withCredentials:</strong> 17 resource-specific API adapters; 401 → auto redirect with SILENT_401_PATTERNS for UX preservation</li>
     </ul>
     <p><em>Infrastructure:</em></p>
     <ul>
-      <li><strong>AWS EC2:</strong> Cloud deployment with systemd service management</li>
-      <li><strong>GitHub Actions:</strong> CI/CD pipeline for automated build and deploy</li>
+      <li><strong>AWS EC2:</strong> systemd service management, production-grade <code>application-prod.properties</code> (<code>ddl-auto=validate</code>, env-required secrets, actuator minimized)</li>
+      <li><strong>Security hardening:</strong> path traversal prevention, COMPLETED-project mutation guard, CSRF via SameSite=Lax, multipart upload size cap (50 MB)</li>
+    </ul>
+  </div>
+
+  <div class="module">
+    <h3 style="color:#1e40af;"><strong>Scale &amp; Performance</strong></h3>
+    <ul>
+      <li>1,000 partners · 1,000 clients · 1,000 projects (seeded)</li>
+      <li>Frontend display sample: 500 records per entity (API-layer <code>.slice(0, 500)</code>)</li>
+      <li>Batch query optimization: 3,001 SQL → 4 SQL for partner list endpoint</li>
+      <li>AI matching: up to 50 candidates per Gemini call</li>
     </ul>
   </div>
 
