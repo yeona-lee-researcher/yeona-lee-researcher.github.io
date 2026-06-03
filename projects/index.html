@@ -80,83 +80,107 @@
 <section class="section">
   <h2>Selected Projects</h2>
 
-  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-top:1.2rem;">
+  <!-- Tab Nav -->
+  <div class="proj-tabs" role="tablist">
+    <button class="proj-tab active" role="tab" onclick="switchTab('alpha')" id="tab-alpha">
+      🧬 Alpha-Helix
+    </button>
+    <button class="proj-tab" role="tab" onclick="switchTab('devbridge')" id="tab-devbridge">
+      🌉 DevBridge
+    </button>
+    <button class="proj-tab" role="tab" onclick="switchTab('festory')" id="tab-festory">
+      ☀️ Festory
+    </button>
+  </div>
 
-    <!-- Card: Alpha-Helix -->
-    <a href="#alpha-helix" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
-      <h3 style="margin-top:0;">
-        <strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
-          🧬 Alpha-Helix
-        </strong>
-      </h3>
-      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
-        AI quant investment workspace (AIBE5 Team 2). 7-strategy vectorbt backtester → QuantStats tearsheet → XGBoost+SHAP signal engine → 5-state HMM regime detection → OrderProposal MOCK→REAL KIS live trading gate. Gemini 2.5-flash daily briefing. Toss Payments subscription. 3-process EC2 deployment.
-      </p>
-      <div class="badges">
-        <span class="badge">Python</span>
-        <span class="badge">FastAPI</span>
-        <span class="badge">vectorbt</span>
-        <span class="badge">XGBoost</span>
-        <span class="badge">SHAP</span>
-        <span class="badge">Spring Boot 4</span>
-        <span class="badge">Java 21</span>
-        <span class="badge">React 18</span>
-        <span class="badge">Tailwind 4</span>
-        <span class="badge">Gemini 2.5</span>
-        <span class="badge">KIS API</span>
-        <span class="badge">Toss Payments</span>
-        <span class="badge">MySQL 8</span>
-        <span class="badge">AWS EC2</span>
+  <!-- Tab: Alpha-Helix -->
+  <div class="proj-panel" id="panel-alpha">
+    <div class="proj-panel-inner">
+      <div class="proj-video">
+        <div class="proj-video-placeholder">
+          <span style="color:#a855f7; font-size:2rem;">🧬</span>
+          <p style="margin:8px 0 0; color:#6b7280; font-size:13px;">Demo video coming soon</p>
+        </div>
       </div>
-    </a>
-
-    <!-- Card: DevBridge -->
-    <a href="#devbridge" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
-      <h3 style="margin-top:0;">
-        <strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
-          🌉 DevBridge
-        </strong>
-      </h3>
-      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
-        AI freelancer ↔ client matching platform. Gemini 2.0 Flash ranks top-N matches from free-text queries + filters. Full project lifecycle: proposal → 7-step contract → milestone escrow → review. JWT HttpOnly auth, Stream Chat, 32-table schema, 38 frontend routes.
-      </p>
-      <div class="badges">
-        <span class="badge">Spring Boot 3</span>
-        <span class="badge">Java 17</span>
-        <span class="badge">React 19</span>
-        <span class="badge">Gemini 2.0</span>
-        <span class="badge">MySQL 8</span>
-        <span class="badge">Stream Chat</span>
-        <span class="badge">JWT</span>
-        <span class="badge">AWS EC2</span>
+      <div class="proj-info">
+        <h3 style="margin:0 0 6px;"><strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-size:1.3rem;">🧬 Alpha-Helix</strong></h3>
+        <p class="small" style="color:#6b7280; margin:0 0 12px;">AI Quant Investment Workspace · AIBE5 Team 2</p>
+        <div class="proj-features">
+          <div class="proj-feature-item"><span class="proj-num">1</span><div><strong>7-Strategy Backtester</strong><br><span style="color:#6b7280; font-size:13px;">vectorbt · buy-and-hold / SMA / RSI / MACD / Momentum / VIX / 무한매수법 · QuantStats tearsheet 자동생성</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">2</span><div><strong>AI Signal Engine</strong><br><span style="color:#6b7280; font-size:13px;">XGBoost 13피처 + SHAP 설명 · 5-State HMM Regime · Trust Score 파라미터 섭동 · 22:30 자동 재학습</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">3</span><div><strong>MOCK → REAL KIS 실주문</strong><br><span style="color:#6b7280; font-size:13px;">OrderProposal 큐 · HMAC 서명 승인링크 · AES-GCM 자격증명 암호화 · 글로벌 Kill-Switch</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">4</span><div><strong>Gemini 2.5 Daily Briefing · Toss Payments</strong><br><span style="color:#6b7280; font-size:13px;">일일 포트폴리오 코멘트 · FREE/STANDARD/PREMIUM 구독플랜 · 3-process EC2 배포</span></div></div>
+        </div>
+        <div class="badges" style="margin-top:14px;">
+          <span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">vectorbt</span><span class="badge">XGBoost</span><span class="badge">SHAP</span><span class="badge">Spring Boot 4</span><span class="badge">Java 21</span><span class="badge">React 18</span><span class="badge">Gemini 2.5</span><span class="badge">KIS API</span><span class="badge">Toss Payments</span><span class="badge">MySQL 8</span><span class="badge">AWS EC2</span>
+        </div>
+        <a href="#alpha-helix" style="display:inline-block; margin-top:14px; font-size:13px; color:#7c3aed; font-weight:600;">상세 내용 보기 →</a>
       </div>
-    </a>
+    </div>
+  </div>
 
-    <!-- Card: Festory -->
-    <a href="#festory" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
-      <h3 style="margin-top:0;">
-        <strong style="background:linear-gradient(135deg,#ff6b35 0%,#f7b731 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
-          ☀️ Festory
-        </strong>
-      </h3>
-      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
-        AI-powered Korean festival discovery app. Location-aware recommendations on Google Maps with live weather overlay, one-click Google Calendar sync, and OAuth 2.0 authentication.
-      </p>
-      <div class="badges">
-        <span class="badge">React 19</span>
-        <span class="badge">Vite</span>
-        <span class="badge">Tailwind CSS</span>
-        <span class="badge">Zustand</span>
-        <span class="badge">Google Maps API</span>
-        <span class="badge">Google Calendar API</span>
-        <span class="badge">Google OAuth</span>
+  <!-- Tab: DevBridge -->
+  <div class="proj-panel" id="panel-devbridge" style="display:none;">
+    <div class="proj-panel-inner">
+      <div class="proj-video">
+        <iframe
+          src="https://drive.google.com/file/d/1AAkACCmj64pFaYbxvrxdscJPjc_cY2fz/preview"
+          style="width:100%; height:100%; border:none; border-radius:8px;"
+          allow="autoplay" allowfullscreen>
+        </iframe>
       </div>
-    </a>
+      <div class="proj-info">
+        <h3 style="margin:0 0 6px;"><strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-size:1.3rem;">🌉 DevBridge</strong></h3>
+        <p class="small" style="color:#6b7280; margin:0 0 12px;">AI Freelancer × Client Matching Platform · AIBE5 Team 2</p>
+        <div class="proj-features">
+          <div class="proj-feature-item"><span class="proj-num" style="background:linear-gradient(135deg,#10b981,#3b82f6);">1</span><div><strong>Gemini 2.0 Flash AI 매칭</strong><br><span style="color:#6b7280; font-size:13px;">자연어 쿼리 + 필터 → Top-N 프리랜서 스코어링 · 22개 REST 컨트롤러</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num" style="background:linear-gradient(135deg,#10b981,#3b82f6);">2</span><div><strong>전체 프로젝트 라이프사이클</strong><br><span style="color:#6b7280; font-size:13px;">제안 → 7단계 계약 협의 → 마일스톤 에스크로 → 검토 · 32테이블 스키마</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num" style="background:linear-gradient(135deg,#10b981,#3b82f6);">3</span><div><strong>Stream Chat · JWT HttpOnly</strong><br><span style="color:#6b7280; font-size:13px;">실시간 채팅 · XSS 차단 쿠키 인증 · SecureRandom 1원 본인인증 · 38 프론트엔드 라우트</span></div></div>
+        </div>
+        <div class="badges" style="margin-top:14px;">
+          <span class="badge">Spring Boot 3</span><span class="badge">Java 17</span><span class="badge">React 19</span><span class="badge">Gemini 2.0</span><span class="badge">MySQL 8</span><span class="badge">Stream Chat</span><span class="badge">JWT</span><span class="badge">AWS EC2</span>
+        </div>
+        <a href="#devbridge" style="display:inline-block; margin-top:14px; font-size:13px; color:#10b981; font-weight:600;">상세 내용 보기 →</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- Tab: Festory -->
+  <div class="proj-panel" id="panel-festory" style="display:none;">
+    <div class="proj-panel-inner">
+      <div class="proj-video">
+        <iframe
+          src="https://drive.google.com/file/d/1Hb3Dz2ghEP2GhYKnRotzG8tpa6KQ_tzS/preview"
+          style="width:100%; height:100%; border:none; border-radius:8px;"
+          allow="autoplay" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="proj-info">
+        <h3 style="margin:0 0 6px;"><strong style="background:linear-gradient(135deg,#ff6b35 0%,#f7b731 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-size:1.3rem;">☀️ Festory</strong></h3>
+        <p class="small" style="color:#6b7280; margin:0 0 12px;">AI-Powered Korean Festival Discovery App · Frontend Project</p>
+        <div class="proj-features">
+          <div class="proj-feature-item"><span class="proj-num" style="background:linear-gradient(135deg,#ff6b35,#f7b731);">1</span><div><strong>AI 축제 추천</strong><br><span style="color:#6b7280; font-size:13px;">7문항 취향 테스트 → 맞춤 축제 추천 · Google Maps 위치 인식 · 실시간 날씨 오버레이</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num" style="background:linear-gradient(135deg,#ff6b35,#f7b731);">2</span><div><strong>Google Calendar 원클릭 동기화</strong><br><span style="color:#6b7280; font-size:13px;">축제 일정 → 내 캘린더 자동 추가 · OAuth 2.0 인증 · Zustand 상태관리</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num" style="background:linear-gradient(135deg,#ff6b35,#f7b731);">3</span><div><strong>React 19 + Vite + Tailwind 4</strong><br><span style="color:#6b7280; font-size:13px;">최신 프론트엔드 스택 · 반응형 · PWA-ready</span></div></div>
+        </div>
+        <div class="badges" style="margin-top:14px;">
+          <span class="badge">React 19</span><span class="badge">Vite</span><span class="badge">Tailwind CSS</span><span class="badge">Zustand</span><span class="badge">Google Maps API</span><span class="badge">Google Calendar API</span><span class="badge">Google OAuth</span>
+        </div>
+        <a href="#festory" style="display:inline-block; margin-top:14px; font-size:13px; color:#f97316; font-weight:600;">상세 내용 보기 →</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<hr style="margin:2.5rem 0; border:none; border-top:1px solid #e5e7eb;">
+<script>
+function switchTab(id) {
+  ['alpha','devbridge','festory'].forEach(function(t) {
+    document.getElementById('panel-' + t).style.display = t === id ? 'block' : 'none';
+    document.getElementById('tab-' + t).classList.toggle('active', t === id);
+  });
+}
+</script>
+
 
 <!-- ───────────────────────────────────────────
      DETAIL: ALPHA-HELIX
