@@ -552,6 +552,7 @@ a, button, input[type="button"], input[type="submit"],
 }
 
 .proj-video-wrap { display: flex; flex-direction: column; gap: 8px; }
+.proj-video-wrap .proj-video { flex: 1; }
 .proj-site-btn {
   display: inline-flex;
   align-items: center;
@@ -559,6 +560,7 @@ a, button, input[type="button"], input[type="submit"],
   padding: 8px 16px;
   background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%);
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   font-size: 13px;
   font-weight: 700;
   border-radius: 8px;
