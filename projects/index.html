@@ -1,53 +1,268 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects  Hyoyeon Lee</title>
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Hyoyeon Lee</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
 <body>
-<header class="header"><div class="container header-inner">
-  <a class="brand" href="/">Hyoyeon Lee</a>
-  <nav class="nav"><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/research/">Research</a><a href="/teaching/">Teaching</a><a href="/news/">News</a><a href="/cv/">CV</a></nav>
-</div></header>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/">Hyoyeon Lee</a>
+    <nav class="nav">
+      <a href="/about/">About</a>
+      <a href="/projects/">Projects</a>
+      <a href="/research/">Research</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/news/">News</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </div>
+</header>
+
 <main class="container main">
 <h1>Projects</h1>
 
-<!-- Quick Navigation -->
-<div style="margin: 2rem 0; padding: 1.5rem; background: #f8fafc; border-radius: 8px; border-left: 4px solid #2563eb;">
-  <p style="margin: 0 0 1rem 0; font-weight: 600; color: #1e293b;">Quick Links:</p>
-  <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-    <a href="#festory" style="color: #2563eb; text-decoration: none; font-weight: 500; transition: color 0.2s;">
-      1. 🌇☀️ Festory - Festival Travel Website
-    </a>
-    <a href="#alpha-helix" style="color: #2563eb; text-decoration: none; font-weight: 500; transition: color 0.2s;">
-      2. 🧬 Alpha-Helix - Quant Trading System
-    </a>
-  </div>
-</div>
+<!-- ───────────────────────────────────────────
+     COMPANY PROJECTS
+──────────────────────────────────────────── -->
+<section class="section">
+  <h2>Company Projects</h2>
+  <p class="disclosure">Company-internal projects; details are omitted due to confidentiality.</p>
 
-<!-- New Festory Project -->
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-top:1.2rem;">
+
+    <!-- Card: DRAM ML Optimization -->
+    <div class="module" style="margin:0;">
+      <h3 style="margin-top:0; display:flex; align-items:center; gap:6px;">
+        <strong>DRAM ML Optimization</strong>
+        <img src="/assets/img/samsung-wordmark.png" alt="Samsung" style="height:12px; opacity:0.6; vertical-align:baseline;">
+      </h3>
+      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+        Production-grade optimization + automation pipeline for high-volume DRAM test streams. Achieved record-high yields on new products.
+      </p>
+      <div class="badges">
+        <span class="badge">ML optimization</span>
+        <span class="badge">Automation</span>
+        <span class="badge">Python</span>
+        <span class="badge">C/C++</span>
+      </div>
+    </div>
+
+    <!-- Card: TB-scale Data Platform -->
+    <div class="module" style="margin:0;">
+      <h3 style="margin-top:0; display:flex; align-items:center; gap:6px;">
+        <strong>TB-scale Data Platform</strong>
+        <img src="/assets/img/samsung-wordmark.png" alt="Samsung" style="height:12px; opacity:0.6; vertical-align:baseline;">
+      </h3>
+      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+        Parallel processing + orchestration for production logs; automated anomaly detection workflows at TB scale.
+      </p>
+      <div class="badges">
+        <span class="badge">Cloud</span>
+        <span class="badge">AWS</span>
+        <span class="badge">GCP</span>
+        <span class="badge">Airflow</span>
+        <span class="badge">Dask</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr style="margin:2.5rem 0; border:none; border-top:1px solid #e5e7eb;">
+
+<!-- ───────────────────────────────────────────
+     SELECTED PROJECTS
+──────────────────────────────────────────── -->
+<section class="section">
+  <h2>Selected Projects</h2>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-top:1.2rem;">
+
+    <!-- Card: Alpha-Helix -->
+    <a href="#alpha-helix" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
+      <h3 style="margin-top:0;">
+        <strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
+          🧬 Alpha-Helix
+        </strong>
+      </h3>
+      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+        End-to-end quantitative research system: automated data ingestion → real-time signal engine → strategy dashboards.
+      </p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Airflow</span>
+        <span class="badge">Redis</span>
+        <span class="badge">Dash/Streamlit</span>
+        <span class="badge">MLflow</span>
+      </div>
+    </a>
+
+    <!-- Card: DevBridge -->
+    <a href="#devbridge" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
+      <h3 style="margin-top:0;">
+        <strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
+          🌉 DevBridge
+        </strong>
+      </h3>
+      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+        Developer Q&amp;A community platform (Stack Overflow–style). Full-stack team project built with Spring Boot + React.
+      </p>
+      <div class="badges">
+        <span class="badge">Spring Boot</span>
+        <span class="badge">React</span>
+        <span class="badge">MySQL</span>
+        <span class="badge">AWS EC2</span>
+      </div>
+    </a>
+
+    <!-- Card: Festory -->
+    <a href="#festory" class="module" style="margin:0; text-decoration:none; color:inherit; display:block;">
+      <h3 style="margin-top:0;">
+        <strong style="background:linear-gradient(135deg,#ff6b35 0%,#f7b731 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
+          ☀️ Festory
+        </strong>
+      </h3>
+      <p class="small" style="margin:6px 0 10px 0; color:#4a5568;">
+        AI-powered festival recommendation platform with Google Maps/Calendar integration and real-time weather.
+      </p>
+      <div class="badges">
+        <span class="badge">React 19</span>
+        <span class="badge">Vite</span>
+        <span class="badge">Tailwind CSS</span>
+        <span class="badge">Google OAuth</span>
+        <span class="badge">Zustand</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<hr style="margin:2.5rem 0; border:none; border-top:1px solid #e5e7eb;">
+
+<!-- ───────────────────────────────────────────
+     DETAIL: ALPHA-HELIX
+──────────────────────────────────────────── -->
+<section class="section" id="alpha-helix">
+  <h2>🧬<strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Alpha-Helix</strong> <span style="color:#a855f7;">- End-to-End Quantitative Research &amp; Trading System</span> 🤖</h2>
+  <p class="disclosure">Open personal side project (company work is proprietary).</p>
+  <p>This single, large-scale project contains three tightly integrated modules to demonstrate true "full-stack" capability across the entire quant lifecycle from data ingestion to research and live execution.</p>
+
+  <div class="module" id="chronos">
+    <h3 style="color:#1e40af;"><strong>Module 1: "Chronos" · Datalake · Governing the time of data</strong></h3>
+    <p><em>Goal:</em> Build an automated, high-quality data pipeline that becomes the foundation for all quantitative research (emphasizing data-engineering skill).</p>
+    <p><em>Key capabilities:</em></p>
+    <ul>
+      <li><strong>Automated ingestion.</strong> Use Airflow to automatically collect historical market and on-chain data every day and store it in object storage such as S3.</li>
+      <li><strong>Data quality management.</strong> Integrate Great Expectations into the pipeline to automatically validate missing values, outliers, and schema, and generate human-readable reports.</li>
+      <li><strong>Efficient storage &amp; access.</strong> Leverage Parquet and DuckDB so that even very large datasets can be loaded in seconds for any requested time window and shape.</li>
+    </ul>
+  </div>
+
+  <div class="module" id="hermes">
+    <h3 style="color:#1e40af;"><strong>Module 2: "Hermes" · Real-time Signal Engine · Delivering the market's signals</strong></h3>
+    <p><em>Goal:</em> Receive market data in real time, analyze it, and generate meaningful trading signals with minimal latency (emphasizing ML engineering / algorithmic trading skill).</p>
+    <p><em>Key capabilities:</em></p>
+    <ul>
+      <li><strong>Asynchronous data processing.</strong> Use <code>asyncio</code> and WebSocket to ingest data from multiple exchanges simultaneously in a non-blocking fashion.</li>
+      <li><strong>Real-time feature extraction.</strong> Use Redis as a state store and compute rolling microstructure features (e.g., OFI, realized volatility) directly on the stream.</li>
+      <li><strong>Message-queue architecture.</strong> Employ Redis Pub/Sub to decouple ingestion → feature extraction → signal generation, ensuring scalability and robustness.</li>
+    </ul>
+  </div>
+
+  <div class="module" id="athena">
+    <h3 style="color:#1e40af;"><strong>Module 3: "Athena" · Strategy &amp; Insight Dashboard · Finding wisdom in data</strong></h3>
+    <p><em>Goal:</em> Discover new alpha strategies using the datalake and signal engine, and analyze/monitor their performance in an intuitive way (emphasizing quant strategy skill).</p>
+    <p><em>Key capabilities:</em></p>
+    <ul>
+      <li><strong>Regime-based strategies.</strong> Use ML models such as HMM to classify the market into regimes (trend / range / high-vol) and automatically switch strategies per regime.</li>
+      <li><strong>Systematic experiment management.</strong> Adopt MLflow to record parameters, performance metrics, and result charts for a large number of backtests, enabling rigorous comparison.</li>
+      <li><strong>Interactive dashboard.</strong> Build Streamlit/Dash dashboards to monitor current regime state, recommended strategies, paper-trading performance, and key on-chain indicators.</li>
+    </ul>
+  </div>
+</section>
+
+<hr style="margin:3rem 0; border:none; border-top:1px solid #e5e7eb;">
+
+<!-- ───────────────────────────────────────────
+     DETAIL: DEVBRIDGE
+──────────────────────────────────────────── -->
+<section class="section" id="devbridge">
+  <h2>🌉<strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">DevBridge</strong> <span style="color:#10b981;">- Developer Q&amp;A Community Platform</span></h2>
+  <p class="disclosure">Team project · Full-stack web application</p>
+
+  <p>A Stack Overflow–style Q&amp;A platform built for developers to ask questions, share knowledge, and connect with peers. Designed and developed as a full-stack team project with a focus on scalability and clean architecture.</p>
+
+  <div class="module">
+    <h3 style="color:#1e40af;"><strong>Core Features</strong></h3>
+    <ul>
+      <li><strong>Q&amp;A System:</strong> Post questions with rich-text editor, accept answers, vote on content</li>
+      <li><strong>Tag-based Discovery:</strong> Categorize and filter questions by technology tags</li>
+      <li><strong>User Authentication:</strong> JWT-based login/signup with role management</li>
+      <li><strong>Real-time Notifications:</strong> Notify users on answers and comments</li>
+      <li><strong>Search:</strong> Full-text search across questions and answers</li>
+    </ul>
+  </div>
+
+  <div class="module">
+    <h3 style="color:#1e40af;"><strong>Technical Stack</strong></h3>
+    <p><em>Backend:</em></p>
+    <ul>
+      <li><strong>Spring Boot:</strong> RESTful API server with layered architecture</li>
+      <li><strong>Spring Security + JWT:</strong> Stateless authentication and authorization</li>
+      <li><strong>MySQL / JPA:</strong> Relational data modeling with Hibernate ORM</li>
+    </ul>
+    <p><em>Frontend:</em></p>
+    <ul>
+      <li><strong>React:</strong> Component-based SPA with React Router</li>
+      <li><strong>Axios:</strong> HTTP client for REST API communication</li>
+    </ul>
+    <p><em>Infrastructure:</em></p>
+    <ul>
+      <li><strong>AWS EC2:</strong> Cloud deployment with systemd service management</li>
+      <li><strong>GitHub Actions:</strong> CI/CD pipeline for automated build and deploy</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:2rem;">
+    <a href="https://github.com/prgrms-aibe-devcourse/AIBE5-Project2-Team02"
+       target="_blank"
+       style="color:#2563eb; text-decoration:underline; font-weight:500;">📁 View Source Code on GitHub →</a>
+  </p>
+</section>
+
+<hr style="margin:3rem 0; border:none; border-top:1px solid #e5e7eb;">
+
+<!-- ───────────────────────────────────────────
+     DETAIL: FESTORY
+──────────────────────────────────────────── -->
 <section class="section" id="festory">
-  <h2>☀️<strong style="background: linear-gradient(135deg, #ff6b35 0%, #f7b731 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Festory</strong> <span style="color: #ff6b35;">- Festival Travel Website</span> 🌇</h2>
+  <h2>☀️<strong style="background:linear-gradient(135deg,#ff6b35 0%,#f7b731 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Festory</strong> <span style="color:#ff6b35;">- Festival Travel Website</span> 🌇</h2>
   <p class="disclosure">Frontend Development Project (React + Vite)</p>
-  
+
   <p>A modern web application that helps users discover festivals tailored to their preferences through AI-powered recommendations and comprehensive festival management features.</p>
 
-  <div style="margin: 2rem 0; text-align: center;">
-    <iframe src="https://drive.google.com/file/d/1Hb3Dz2ghEP2GhYKnRotzG8tpa6KQ_tzS/preview" 
-            width="800" height="450" 
-            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" 
-            allow="autoplay" allowfullscreen>
+  <div style="margin:2rem 0; text-align:center;">
+    <iframe
+      src="https://drive.google.com/file/d/1Hb3Dz2ghEP2GhYKnRotzG8tpa6KQ_tzS/preview"
+      width="800" height="450"
+      style="max-width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"
+      allow="autoplay" allowfullscreen>
     </iframe>
-    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-      <a href="https://drive.google.com/file/d/1Hb3Dz2ghEP2GhYKnRotzG8tpa6KQ_tzS/view?usp=sharing" 
-         target="_blank" 
-         style="color: #2563eb; text-decoration: underline;">
+    <p style="margin-top:0.5rem; font-size:0.9rem;">
+      <a href="https://drive.google.com/file/d/1Hb3Dz2ghEP2GhYKnRotzG8tpa6KQ_tzS/view?usp=sharing"
+         target="_blank"
+         style="color:#2563eb; text-decoration:underline;">
         🎬 Watch full video on Google Drive
       </a>
     </p>
   </div>
 
   <div class="module">
-    <h3 style="color: #1e40af;"><strong>Core Features</strong></h3>
+    <h3 style="color:#1e40af;"><strong>Core Features</strong></h3>
     <ul>
       <li><strong>AI Taste Test:</strong> 7-question survey analyzes user preferences to recommend personalized festivals</li>
       <li><strong>Google Calendar Integration:</strong> Manage festival schedules with full OAuth 2.0 integration</li>
@@ -59,156 +274,34 @@
   </div>
 
   <div class="module">
-    <h3 style="color: #1e40af;"><strong>Technical Stack</strong></h3>
-    <p><em>Frontend Framework & Build Tools:</em></p>
+    <h3 style="color:#1e40af;"><strong>Technical Stack</strong></h3>
+    <p><em>Frontend Framework &amp; Build Tools:</em></p>
     <ul>
-      <li><strong>React 19.2.0:</strong> Latest version with functional components and Hooks (useState, useEffect, useMemo, useCallback)</li>
+      <li><strong>React 19.2.0:</strong> Latest version with functional components and Hooks</li>
       <li><strong>Vite 7.2.4:</strong> Ultra-fast build tool with ES Modules and Hot Module Replacement</li>
       <li><strong>React Router DOM 7.12.0:</strong> Client-side routing with BrowserRouter</li>
     </ul>
-
-    <p><em>Styling & UI:</em></p>
+    <p><em>Styling &amp; UI:</em></p>
     <ul>
       <li><strong>Tailwind CSS 4.1.18:</strong> Utility-first CSS framework with custom theme extensions</li>
       <li><strong>Shadcn/ui Components:</strong> Radix UI-based accessible component library</li>
       <li><strong>Lucide React 0.562.0:</strong> SVG-based icon library</li>
     </ul>
-
-    <p><em>State Management & Data:</em></p>
+    <p><em>State Management &amp; Data:</em></p>
     <ul>
       <li><strong>Zustand 5.0.10:</strong> Lightweight state management with localStorage persistence</li>
       <li><strong>date-fns 4.1.0:</strong> Modern date utility library</li>
     </ul>
-
-    <p><em>Key Libraries:</em></p>
-    <ul>
-      <li><strong>FullCalendar 6.1.20:</strong> Interactive calendar with drag & drop support</li>
-      <li><strong>@googlemaps/js-api-loader 2.0.2:</strong> Google Maps JavaScript API integration</li>
-      <li><strong>@react-oauth/google 0.13.4:</strong> Google OAuth 2.0 authentication</li>
-    </ul>
   </div>
 
-  <div class="module">
-    <h3 style="color: #1e40af;"><strong>Key Pages & Features</strong></h3>
-    <ul>
-      <li><strong>Landing Page:</strong> Immersive video introduction with fade animations</li>
-      <li><strong>Taste Test (7 Questions):</strong> Companion, atmosphere, important elements, food preference, color, time, participation level</li>
-      <li><strong>Festival List:</strong> Advanced filtering (region, duration, price, weekend) with real-time search</li>
-      <li><strong>Calendar:</strong> Google Calendar sync with event CRUD operations</li>
-      <li><strong>Map:</strong> Festival locations with nearby accommodation search using Places API</li>
-      <li><strong>Plan & Curation:</strong> AI recommendations with multi-day trip planning</li>
-      <li><strong>My Page:</strong> User profile, taste analysis, liked festivals, and reviews</li>
-    </ul>
-  </div>
-
-  <div class="module">
-    <h3 style="color: #1e40af;"><strong>Architecture Highlights</strong></h3>
-    <ul>
-      <li><strong>Component-Based Design:</strong> Reusable UI components (TownCard, Header, WeatherWidget)</li>
-      <li><strong>Performance Optimization:</strong> useMemo/useCallback for expensive calculations, code splitting with Vite</li>
-      <li><strong>API Integration:</strong> OpenWeather API, Google Maps/Calendar/Places API, Kakao OAuth</li>
-      <li><strong>Responsive Design:</strong> Mobile-first approach with Tailwind CSS breakpoints</li>
-      <li><strong>Type Safety:</strong> JSDoc comments for type hints without TypeScript overhead</li>
-    </ul>
-  </div>
-
-  <div class="module">
-    <h3 style="color: #1e40af;"><strong>Development Highlights</strong></h3>
-    <ul>
-      <li><strong>Modern Build Tooling:</strong> Vite 7.x provides instant HMR and optimized production builds with code splitting and tree shaking</li>
-      <li><strong>Component Architecture:</strong> Custom reusable components (TownCard, WeatherWidget, Header variants) following single responsibility principle</li>
-      <li><strong>Advanced State Management:</strong> Zustand with localStorage persistence for user preferences, liked festivals, and taste test results</li>
-      <li><strong>API Integration Patterns:</strong> Comprehensive OAuth 2.0 flows (Google, Kakao), RESTful API consumption, and real-time data fetching</li>
-      <li><strong>Performance Optimization:</strong> React.memo, useMemo, useCallback for render optimization; lazy loading for route-based code splitting</li>
-      <li><strong>CSS Architecture:</strong> Tailwind CSS with custom theme configuration, responsive breakpoints (sm/md/lg/xl), and utility-first approach</li>
-      <li><strong>User Experience:</strong> Accessibility considerations, loading states, error boundaries, and smooth animations using CSS transitions</li>
-      <li><strong>Development Workflow:</strong> ESLint configuration, component-based file structure, clear separation of concerns (components/pages/data/lib)</li>
-    </ul>
-  </div>
-
-  <div class="module">
-    <h3 style="color: #1e40af;"><strong>Technical Implementation Details</strong></h3>
-    <p><strong>Google Calendar Integration:</strong></p>
-    <ul>
-      <li>OAuth 2.0 authentication flow with @react-oauth/google library</li>
-      <li>Full CRUD operations on calendar events using Google Calendar API v3</li>
-      <li>Token management and refresh handling</li>
-    </ul>
-    
-    <p style="margin-top: 1rem;"><strong>Map & Location Features:</strong></p>
-    <ul>
-      <li>Google Maps JavaScript API with @googlemaps/js-api-loader</li>
-      <li>Custom markers for festival locations with info windows</li>
-      <li>Places API integration for nearby accommodation search</li>
-      <li>Geolocation-based user positioning</li>
-    </ul>
-
-    <p style="margin-top: 1rem;"><strong>AI-Powered Recommendations:</strong></p>
-    <ul>
-      <li>7-question taste test analyzing user preferences across multiple dimensions</li>
-      <li>Preference-based festival matching algorithm</li>
-      <li>Personalized curation with multi-day trip planning capabilities</li>
-    </ul>
-
-    <p style="margin-top: 1rem;"><strong>Data Management:</strong></p>
-    <ul>
-      <li>JSON-based festival data with comprehensive metadata (dates, locations, categories, prices)</li>
-      <li>Client-side filtering and search with real-time updates</li>
-      <li>LocalStorage for persistent user data across sessions</li>
-    </ul>
-  </div>
-
-  <p style="margin-top: 2rem;">
-    <a href="https://github.com/yeona-lee-researcher/yeona-lee-researcher.github.io/tree/main/projects/aibe5Frontend" 
-       target="_blank" 
-       style="color: #2563eb; text-decoration: underline; font-weight: 500;">📁 View Source Code on GitHub →</a>
+  <p style="margin-top:2rem;">
+    <a href="https://github.com/yeona-lee-researcher/yeona-lee-researcher.github.io/tree/main/projects/aibe5Frontend"
+       target="_blank"
+       style="color:#2563eb; text-decoration:underline; font-weight:500;">📁 View Source Code on GitHub →</a>
   </p>
 </section>
 
-<hr style="margin: 3rem 0; border: none; border-top: 1px solid #e5e7eb;">
-
-<!-- Original Alpha-Helix Project -->
-<section class="section" id="alpha-helix">
-  <h2>🧬<strong style="background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Alpha-Helix</strong> <span style="color: #a855f7;">- End-to-End Quantitative Research & Trading System</span> 🤖</h2>
-  <p class="disclosure">Open personal side project (company work is proprietary).</p>
-  <p>This single, large-scale project contains three tightly integrated modules to demonstrate true "full-stack" capability across the entire quant lifecycle  from data ingestion to research and live execution.</p>
-
-  <div class="module" id="chronos">
-    <h3 style="color: #1e40af;"><strong>Module 1: "Chronos"  Datalake  Governing the time of data</strong></h3>
-    <p><em>Goal:</em> Build an automated, high-quality data pipeline that becomes the foundation for all quantitative research (emphasizing data-engineering skill).</p>
-    <p><em>Key capabilities:</em></p>
-    <ul>
-      <li><strong>Automated ingestion.</strong> Use Airflow to automatically collect historical market and on-chain data every day and store it in object storage such as S3.</li>
-      <li><strong>Data quality management.</strong> Integrate Great Expectations into the pipeline to automatically validate missing values, outliers, and schema, and generate human-readable reports.</li>
-      <li><strong>Efficient storage & access.</strong> Leverage Parquet and DuckDB so that even very large datasets can be loaded in seconds for any requested time window and shape.</li>
-    </ul>
-  </div>
-
-  <div class="module" id="hermes">
-    <h3 style="color: #1e40af;"><strong>Module 2: "Hermes"  Real-time Signal Engine  Delivering the market's signals</strong></h3>
-    <p><em>Goal:</em> Receive market data in real time, analyze it, and generate meaningful trading signals with minimal latency (emphasizing ML engineering / algorithmic trading skill).</p>
-    <p><em>Key capabilities:</em></p>
-    <ul>
-      <li><strong>Asynchronous data processing.</strong> Use <code>asyncio</code> and WebSocket to ingest data from multiple exchanges simultaneously in a non-blocking fashion.</li>
-      <li><strong>Real-time feature extraction.</strong> Use Redis as a state store and compute rolling microstructure features (e.g., OFI, realized volatility) directly on the stream.</li>
-      <li><strong>Message-queue architecture.</strong> Employ Redis Pub/Sub to decouple ingestion  feature extraction  signal generation, ensuring scalability and robustness.</li>
-    </ul>
-  </div>
-
-  <div class="module" id="athena">
-    <h3 style="color: #1e40af;"><strong>Module 3: "Athena"  Strategy & Insight Dashboard  Finding wisdom in data</strong></h3>
-    <p><em>Goal:</em> Discover new alpha strategies using the datalake and signal engine, and analyze/monitor their performance in an intuitive way (emphasizing quant strategy skill).</p>
-    <p><em>Key capabilities:</em></p>
-    <ul>
-      <li><strong>Regime-based strategies.</strong> Use ML models such as HMM to classify the market into regimes (trend / range / high-vol) and automatically switch strategies per regime.</li>
-      <li><strong>Systematic experiment management.</strong> Adopt MLflow to record parameters, performance metrics, and result charts for a large number of backtests, enabling rigorous comparison.</li>
-      <li><strong>Interactive dashboard.</strong> Build Streamlit/Dash dashboards to monitor current regime state, recommended strategies, paper-trading performance, and key on-chain indicators.</li>
-    </ul>
-  </div>
-</section>
-
-<div class="footer"> 2026 Hyoyeon Lee  Hosted on GitHub Pages</div>
-</main></body></html>
-
-
-
+<div class="footer">© 2026 Hyoyeon Lee · Hosted on GitHub Pages</div>
+</main>
+</body>
+</html>
