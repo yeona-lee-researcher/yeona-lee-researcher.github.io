@@ -29,7 +29,7 @@
      COMPANY PROJECTS
 ──────────────────────────────────────────── -->
 <section class="section">
-  <h2>Company Projects</h2>
+  <h2 class="section-heading">Company Projects</h2>
   <p class="disclosure">Company-internal projects; details are omitted due to confidentiality.</p>
 
   <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-top:1.2rem;">
@@ -78,7 +78,7 @@
      SELECTED PROJECTS
 ──────────────────────────────────────────── -->
 <section class="section">
-  <h2>Selected Projects</h2>
+  <h2 class="section-heading">Selected Projects</h2>
 
   <!-- Tab Nav -->
   <div class="proj-tabs" role="tablist">
@@ -96,23 +96,27 @@
   <!-- Tab: Alpha-Helix -->
   <div class="proj-panel" id="panel-alpha">
     <div class="proj-panel-inner">
-      <div class="proj-video">
-        <div class="proj-video-placeholder">
-          <span style="color:#a855f7; font-size:2rem;">🧬</span>
-          <p style="margin:8px 0 0; color:#6b7280; font-size:13px;">Demo video coming soon</p>
+      <div class="proj-video-wrap">
+        <div class="proj-video">
+          <iframe
+            src="https://drive.google.com/file/d/1PPYISaD-uASttzEffPQg7x5BumKDF8FB/preview"
+            style="width:100%; height:100%; border:none; border-radius:8px;"
+            allow="autoplay" allowfullscreen>
+          </iframe>
         </div>
       </div>
+      <a href="https://quant-alphahelix.com/" target="_blank" rel="noopener" class="proj-site-btn">🌐 quant-alphahelix.com 방문 →</a>
       <div class="proj-info">
         <h3 style="margin:0 0 6px;"><strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-size:1.3rem;">🧬 Alpha-Helix</strong></h3>
-        <p class="small" style="color:#6b7280; margin:0 0 12px;">AI Quant Investment Workspace · AIBE5 Team 2</p>
+        <p class="small" style="color:#6b7280; margin:0 0 12px;">AI 퀀트 투자 개인매니저 · 퀀트 개발자 전문 IDE · Claude Code</p>
         <div class="proj-features">
-          <div class="proj-feature-item"><span class="proj-num">1</span><div><strong>7-Strategy Backtester</strong><br><span style="color:#6b7280; font-size:13px;">vectorbt · buy-and-hold / SMA / RSI / MACD / Momentum / VIX / 무한매수법 · QuantStats tearsheet 자동생성</span></div></div>
-          <div class="proj-feature-item"><span class="proj-num">2</span><div><strong>AI Signal Engine</strong><br><span style="color:#6b7280; font-size:13px;">XGBoost 13피처 + SHAP 설명 · 5-State HMM Regime · Trust Score 파라미터 섭동 · 22:30 자동 재학습</span></div></div>
-          <div class="proj-feature-item"><span class="proj-num">3</span><div><strong>MOCK → REAL KIS 실주문</strong><br><span style="color:#6b7280; font-size:13px;">OrderProposal 큐 · HMAC 서명 승인링크 · AES-GCM 자격증명 암호화 · 글로벌 Kill-Switch</span></div></div>
-          <div class="proj-feature-item"><span class="proj-num">4</span><div><strong>Gemini 2.5 Daily Briefing · Toss Payments</strong><br><span style="color:#6b7280; font-size:13px;">일일 포트폴리오 코멘트 · FREE/STANDARD/PREMIUM 구독플랜 · 3-process EC2 배포</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">1</span><div><strong>Backtesting Engine · LEAN + vectorbt</strong><br><span style="color:#6b7280; font-size:13px;">LEAN CI 프레임워크 + vectorbt 병행 · 7 전략 (SMA / RSI / MACD / Momentum / VIX / 무한매수법 / buy-and-hold) · QuantStats tearsheet 자동생성</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">2</span><div><strong>AI Signal Engine · Trust Score</strong><br><span style="color:#6b7280; font-size:13px;">XGBoost 13피처 + SHAP 설명 · 5-State HMM Regime · Trust Score 파라미터 섭동 · 22:30 자동 재학습</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">3</span><div><strong>KIS + Binance 실주문 자동화</strong><br><span style="color:#6b7280; font-size:13px;">MOCK → REAL 게이트 · OrderProposal 큐 · HMAC 서명 승인링크 · AES-GCM 자격증명 암호화 · 글로벌 Kill-Switch · KIS(한국주식) + Binance(암호화폐) 모두 실주문</span></div></div>
+          <div class="proj-feature-item"><span class="proj-num">4</span><div><strong>Multi-LLM Daily Briefing (Gemini · Claude)</strong><br><span style="color:#6b7280; font-size:13px;">Gemini 2.5 + Claude 멀티 LLM 포트폴리오 코멘트 · Toss Payments FREE/STANDARD/PREMIUM 구독 · 3-process EC2 배포</span></div></div>
         </div>
         <div class="badges" style="margin-top:14px;">
-          <span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">vectorbt</span><span class="badge">XGBoost</span><span class="badge">SHAP</span><span class="badge">Spring Boot 4</span><span class="badge">Java 21</span><span class="badge">React 18</span><span class="badge">Gemini 2.5</span><span class="badge">KIS API</span><span class="badge">Toss Payments</span><span class="badge">MySQL 8</span><span class="badge">AWS EC2</span>
+          <span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">LEAN</span><span class="badge">vectorbt</span><span class="badge">XGBoost</span><span class="badge">SHAP</span><span class="badge">Spring Boot 4</span><span class="badge">Java 21</span><span class="badge">React 18</span><span class="badge">Gemini 2.5</span><span class="badge">Claude</span><span class="badge">KIS API</span><span class="badge">Binance API</span><span class="badge">Toss Payments</span><span class="badge">MySQL 8</span><span class="badge">AWS EC2</span>
         </div>
         <a href="#alpha-helix" style="display:inline-block; margin-top:14px; font-size:13px; color:#7c3aed; font-weight:600;">상세 내용 보기 →</a>
       </div>
@@ -186,16 +190,17 @@ function switchTab(id) {
      DETAIL: ALPHA-HELIX
 ──────────────────────────────────────────── -->
 <section class="section" id="alpha-helix">
-  <h2>🧬<strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Alpha-Helix</strong> <span style="color:#a855f7;">- AI-Powered Quant Investment Workspace</span> 🤖</h2>
-  <p class="disclosure">Team project (AIBE5 Team 2) · AI quant investment workspace built on DevBridge infrastructure · 3-process architecture (Spring Boot + FastAPI analytics sidecar + React)</p>
-  <p>Natural language prompt → strategy configuration → 7-strategy backtesting → QuantStats tearsheet → XGBoost+SHAP AI signal → OrderProposal queue → MOCK→REAL KIS live order execution. The full quant lifecycle in a single workspace, with subscription plans and Gemini 2.5-flash daily briefings.</p>
+  <h2>🧬<strong style="background:linear-gradient(135deg,#a855f7 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Alpha-Helix</strong> <span style="color:#a855f7;">- AI 퀀트 투자 개인매니저 · 퀀트 개발자 전문 IDE</span></h2>
+  <p class="disclosure">개인 프로젝트 · 배포 사이트: <a href="https://quant-alphahelix.com/" target="_blank" rel="noopener" style="color:#7c3aed;">quant-alphahelix.com</a> · 3-process 아키텍처 (Spring Boot + FastAPI analytics sidecar + React)</p>
+  <p>자연어 목표 → 전략 구성 → LEAN/vectorbt 백테스트 → QuantStats tearsheet → XGBoost+SHAP AI 시그널 → OrderProposal 큐 → MOCK→REAL KIS·Binance 실주문 자동화. Gemini 2.5 + Claude 멀티 LLM 일일 브리핑과 구독 플랜을 갖춘 실제 퀀트 펀드매니저 워크스페이스.</p>
 
   <div class="module">
-    <h3 style="color:#1e40af;"><strong>Backtesting Engine</strong> · vectorbt 0.26 · 7 Strategies</h3>
+    <h3 style="color:#1e40af;"><strong>Backtesting Engine</strong> · LEAN CI + vectorbt · 7 Strategies</h3>
     <ul>
-      <li><strong>7 strategies:</strong> buy-and-hold, SMA cross, RSI mean-reversion, MACD, momentum 12-1, VIX risk-off, 무한매수법(infinite buying). All implemented on <code>vectorbt</code> with 0.25% commission + 0.1% slippage baked in.</li>
-      <li><strong>QuantStats tearsheet.</strong> Auto-generated HTML reports served at <code>/reports/{file}.html</code> — Sharpe, Calmar, max drawdown, monthly returns heatmap, and more.</li>
-      <li><strong>Walk-Forward validation.</strong> Out-of-sample rolling window backtests prevent overfitting before any strategy reaches the signal stage.</li>
+      <li><strong>LEAN CI 프레임워크.</strong> QuantConnect LEAN을 CI 백테스팅 엔진으로 통합 — 실제 퀀트 펀드매니저가 사용하는 리서치 파이프라인과 동일한 환경.</li>
+      <li><strong>vectorbt 병행 엔진.</strong> 7 전략 — buy-and-hold, SMA cross, RSI mean-reversion, MACD, momentum 12-1, VIX risk-off, 무한매수법. 0.25% commission + 0.1% slippage 반영.</li>
+      <li><strong>QuantStats tearsheet.</strong> HTML 리포트 자동생성 (<code>/reports/{file}.html</code>) — Sharpe, Calmar, max drawdown, 월별 수익 히트맵 등.</li>
+      <li><strong>Walk-Forward validation.</strong> 오버피팅 방지를 위한 롤링 윈도우 out-of-sample 검증 후 시그널 단계로 진입.</li>
     </ul>
   </div>
 
@@ -210,19 +215,19 @@ function switchTab(id) {
   </div>
 
   <div class="module">
-    <h3 style="color:#1e40af;"><strong>OrderProposal Queue &amp; KIS Live Trading</strong> · MOCK → REAL Gate</h3>
+    <h3 style="color:#1e40af;"><strong>KIS + Binance 실주문 자동화</strong> · MOCK → REAL Gate</h3>
     <ul>
-      <li><strong>MOCK-first architecture.</strong> Daily signal generator always creates MOCK proposals first. Real orders require explicit user approval — no automatic live execution without confirmation.</li>
-      <li><strong>HMAC-signed approval links.</strong> Approval tokens embedded in email/notification links are HMAC-signed with TTL. <code>OrderProposalExpiryJob</code> auto-cleans expired queue entries.</li>
-      <li><strong>KIS OpenAPI integration.</strong> Mock and real brokerage accounts registered per user. Credentials stored with AES-GCM encryption (key via <code>APP_CRYPTO_KEY</code> env var). Token auto-renewal, balance/quote/order APIs all wired.</li>
-      <li><strong>Global Kill-Switch.</strong> <code>TRADING_KILL_SWITCH=true</code> rejects all real KIS orders at the adapter layer — one env var to halt all live trading system-wide.</li>
+      <li><strong>MOCK-first 아키텍처.</strong> 시그널 생성기는 항상 MOCK 제안 먼저 생성. 실주문 전환은 사용자 명시적 승인 필요 — 자동 실주문 없음.</li>
+      <li><strong>HMAC 서명 승인링크.</strong> 이메일/알림 링크에 TTL 포함 HMAC 토큰 삽입. <code>OrderProposalExpiryJob</code>이 만료 큐 항목 자동 정리.</li>
+      <li><strong>KIS OpenAPI (한국 주식) + Binance API (암호화폐).</strong> 두 거래소 모두 실주문 지원. 자격증명은 AES-GCM 암호화 저장 (<code>APP_CRYPTO_KEY</code> env var). 토큰 자동갱신, 잔고/시세/주문 API 완전 연결.</li>
+      <li><strong>글로벌 Kill-Switch.</strong> <code>TRADING_KILL_SWITCH=true</code> 설정 시 어댑터 레이어에서 모든 실주문 차단 — 환경변수 하나로 전체 라이브 트레이딩 즉시 정지.</li>
     </ul>
   </div>
 
   <div class="module">
-    <h3 style="color:#1e40af;"><strong>Living Briefing, Subscription &amp; Infrastructure</strong></h3>
+    <h3 style="color:#1e40af;"><strong>Multi-LLM Daily Briefing (Gemini 2.5 · Claude) &amp; 구독 인프라</strong></h3>
     <ul>
-      <li><strong>Gemini 2.5-flash daily briefing.</strong> <code>AiGatewayService</code> manages quota + logging and generates daily market summary + per-user portfolio commentary. Optional Anthropic / OpenAI / Perplexity routing supported.</li>
+      <li><strong>멀티 LLM 일일 브리핑.</strong> <code>AiGatewayService</code>가 Gemini 2.5 + Claude (Anthropic) 멀티 LLM 폴백 체인 관리. 일일 시장 요약 + 사용자별 포트폴리오 코멘트 자동 생성. OpenAI / Perplexity 라우팅도 지원.</li>
       <li><strong>Subscription plans.</strong> FREE / STANDARD (9,900₩/mo) / PREMIUM (19,900₩/mo) / EXPERT — Toss Payments v1 full payment flow. Sandbox testable without real billing.</li>
       <li><strong>Rate limiting &amp; security.</strong> Bucket4j enforces 20 AI chat req/hour/user. JWT HttpOnly cookies (XSS protection). Flyway migrations with <code>ddl-auto=validate</code>.</li>
       <li><strong>3-process EC2 deployment.</strong> Single <code>who-a</code> EC2 instance: Nginx reverse proxy + 3 systemd units (Spring Boot :8080, FastAPI analytics :8001, React dist). Notification center via Zustand persist + BE <code>/api/notifications/*</code>.</li>
@@ -237,7 +242,7 @@ function switchTab(id) {
 ──────────────────────────────────────────── -->
 <section class="section" id="devbridge">
   <h2>🌉<strong style="background:linear-gradient(135deg,#10b981 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">DevBridge</strong> <span style="color:#10b981;">- Freelancer × Client AI Matching Platform</span></h2>
-  <p class="disclosure">Team project (AIBE5 Team 2) · Full-stack web application · Spring Boot + React 19</p>
+  <p class="disclosure">Full-stack web application · Spring Boot 3 + React 19</p>
 
   <p>A platform that matches freelancers and clients using natural language queries combined with structured filters. Powered by Google Gemini 2.0 Flash for AI-based match scoring, with a full project lifecycle from discovery to contract, milestone tracking, and escrow settlement.</p>
 
