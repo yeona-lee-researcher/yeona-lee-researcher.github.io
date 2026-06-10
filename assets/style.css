@@ -504,7 +504,7 @@ a, button, input[type="button"], input[type="submit"],
 }
 .proj-panel-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 28px;
   align-items: stretch;
 }
