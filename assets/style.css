@@ -89,21 +89,19 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
   h1{font-size:31px}
 }
 
-/* About 사진 2단 배치: 왼쪽 칸 / 오른쪽 칸 */
+/* About photos, two columns: left cell / right cell */
 .about-gallery{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: start;   /* 두 사진 위쪽 라인 맞춤 */
+  align-items: start;   /* align both photos to the same top line */
 
-  /* 본문 container(1200px)보다 넓게 빼내기 (가운데 정렬 유지) */
-  width: min(1560px, 94vw);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  /* Shrink to fit inside the body column (container), centered */
+  width: min(720px, 100%);
+  margin: 0 auto;
 }
 @media (max-width: 900px){
-  .about-gallery{ grid-template-columns: 1fr; }  /* 좁은 화면에선 위아래로 */
+  .about-gallery{ grid-template-columns: 1fr; }  /* stack vertically on narrow screens */
 }
 
 .about-photo{
@@ -111,9 +109,9 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
 }
 
 .about-photo img{
-  width: 100%;          /* 두 사진 가로폭 동일 (1fr + 1fr) */
-  aspect-ratio: 4 / 5;  /* 두 사진 세로높이 동일 */
-  object-fit: cover;    /* 비율 안 깨지게, 넘치는 부분만 잘라냄 */
+  width: 100%;          /* identical width for both photos (1fr + 1fr) */
+  aspect-ratio: 4 / 5;  /* identical height for both photos */
+  object-fit: cover;    /* keep the aspect ratio, crop the overflow only */
   object-position: center;
   border-radius: 16px;
   display: block;
@@ -266,7 +264,7 @@ a, button, input[type="button"], input[type="submit"],
 }
 
 
-/* toast는 contact-inline 안에서 보기 좋게 */
+/* keep the toast looking right inside contact-inline */
 .contact-inline .copy-toast{
   margin-left:2px;
 }
