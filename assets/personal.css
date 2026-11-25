@@ -1,0 +1,340 @@
+/* Home and About refresh. The shared site stylesheet stays unchanged. */
+.personal-page {
+  --personal-ink: #17243b;
+  --personal-blue: #315fc2;
+  --personal-muted: #5b6678;
+}
+
+.personal-page .header-inner {
+  gap: 1.25rem;
+}
+
+.personal-page .nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .25rem;
+}
+
+.personal-page .nav a {
+  margin-left: 0;
+  white-space: nowrap;
+}
+
+.personal-page a:focus-visible {
+  outline: 2px solid var(--personal-blue);
+  outline-offset: 5px;
+}
+
+.personal-page .nav a[aria-current="page"] {
+  color: var(--personal-blue);
+  background: #eef4ff;
+}
+
+.personal-main {
+  padding-top: 0;
+}
+
+.personal-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .85fr);
+  align-items: center;
+  gap: clamp(2rem, 5.5vw, 4.75rem);
+  max-width: 66rem;
+  margin-inline: auto;
+  padding: 3.25rem 0 3.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.personal-intro-copy {
+  min-width: 0;
+}
+
+.personal-eyebrow {
+  margin: 0 0 1rem;
+  color: var(--personal-muted);
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+
+.personal-intro h1 {
+  margin: 0 0 .75rem;
+  color: var(--personal-ink);
+  font-size: clamp(2.35rem, 4vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.personal-intro h1 span {
+  color: var(--personal-blue);
+}
+
+.personal-role {
+  margin: 0 0 1.15rem;
+  color: var(--personal-ink);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.personal-summary {
+  max-width: 37rem;
+  margin: 0 0 1.5rem;
+  color: var(--personal-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.personal-background {
+  display: grid;
+  gap: .6rem;
+  margin: 0 0 1.75rem;
+  padding: 1.05rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.personal-background p {
+  margin: 0;
+  color: var(--personal-muted);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+
+.personal-background strong {
+  color: var(--personal-ink);
+  font-weight: 600;
+}
+
+.personal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1.1rem;
+}
+
+.personal-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.65rem;
+  padding: .65rem 1.1rem;
+  border: 1px solid var(--personal-blue);
+  border-radius: .65rem;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.personal-actions .personal-primary {
+  background: var(--personal-blue);
+  color: #fff;
+}
+
+.personal-actions .personal-secondary {
+  border-color: #dbe2ee;
+  color: var(--personal-ink);
+  background: #fff;
+}
+
+.personal-actions a:hover {
+  box-shadow: 0 3px 12px rgb(23 36 59 / 8%);
+}
+
+.personal-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem 1.1rem;
+  font-size: .88rem;
+  line-height: 1.6;
+}
+
+.personal-links a {
+  overflow-wrap: anywhere;
+}
+
+.personal-portrait {
+  width: 100%;
+  max-width: 23rem;
+  aspect-ratio: 10 / 11;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  background: #f5f6f8;
+}
+
+.personal-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 46% 50%;
+}
+
+.personal-about {
+  max-width: 56rem;
+  padding-top: 3rem;
+}
+
+.personal-about h1 {
+  margin: 0 0 1.5rem;
+  color: var(--personal-ink);
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  line-height: 1.18;
+  letter-spacing: -.035em;
+  font-weight: 700;
+}
+
+.personal-about-copy {
+  max-width: 44rem;
+}
+
+.personal-about-copy p {
+  color: var(--personal-muted);
+  margin: 0 0 1.15rem;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.personal-about-copy .personal-about-lead {
+  font-size: 1.08rem;
+  color: var(--personal-ink);
+  line-height: 1.8;
+}
+
+.personal-outside {
+  margin-top: 2rem;
+}
+
+.personal-outside h2 {
+  margin: 0 0 .65rem;
+  color: var(--personal-ink);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.personal-moments {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  width: min(100%, 28rem);
+  margin: 1.65rem 0 0;
+}
+
+.personal-moment {
+  min-width: 0;
+  margin: 0;
+}
+
+.personal-moment img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: .9rem;
+  background: #f5f6f8;
+}
+
+/* Each crop keeps the subject's face inside the small square frame. */
+.personal-moment .personal-photo-eden {
+  object-position: 50% 70%;
+}
+
+.personal-moment .personal-photo-quiet {
+  object-position: 40% 50%;
+}
+
+.personal-moment figcaption {
+  margin-top: .55rem;
+  color: var(--personal-muted);
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  .personal-intro {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, .8fr);
+    gap: 1.75rem;
+    padding: 2.5rem 0;
+  }
+
+  .personal-intro h1 {
+    font-size: 2.7rem;
+  }
+
+  .personal-role {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .personal-page .header-inner {
+    flex-wrap: wrap;
+    gap: .6rem;
+    padding: 1rem 0 .85rem;
+  }
+
+  .personal-page .brand {
+    font-size: 1.3rem;
+  }
+
+  .personal-page .nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: .2rem;
+  }
+
+  .personal-page .nav a {
+    padding: .4rem .7rem;
+    font-size: .9rem;
+  }
+
+  .personal-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.8rem;
+    padding: 2rem 0 2.5rem;
+  }
+
+  .personal-intro h1 {
+    font-size: 2.65rem;
+  }
+
+  .personal-summary {
+    max-width: 36rem;
+  }
+
+  .personal-portrait {
+    width: min(100%, 18rem);
+    margin-inline: 0;
+  }
+
+  .personal-about {
+    padding-top: 2rem;
+  }
+
+  .personal-about h1 {
+    font-size: 2.15rem;
+  }
+
+  .personal-moments {
+    gap: .8rem;
+    width: min(100%, 25rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-page *,
+  .personal-page *::before,
+  .personal-page *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

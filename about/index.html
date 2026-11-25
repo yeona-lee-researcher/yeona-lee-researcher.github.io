@@ -1,38 +1,69 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About · Yeon Elina Lee</title>
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"></head>
-<body>
-<header class="header"><div class="container header-inner">
-  <a class="brand" href="/">Yeon Elina Lee</a>
-  <nav class="nav"><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/research/">Research</a></nav>
-</div></header>
-<main class="container main">
-  <h1>About</h1>
-  <p>
-      Hi! I’m an AI Full-Stack and ML Systems Engineer with a focus on end-to-end intelligent systems, optimization, and reliable machine learning.
-  I enjoy designing and building systems that connect data infrastructure, machine learning models, backend services, frontend applications, and cloud deployment.
-  My broader interests include algorithmic decision-making and quantitative systems.
-  Outside of work, I’m happiest when I’m out in nature with animals.
-  </p>
-  <!-- Photo block: left = quokka photo / right = 2026 portrait -->
-  <div class="about-gallery">
-    <figure class="about-photo">
-      <img src="/assets/img/aus_quaka.jpg"
-           alt="me with a quokka in Australia"
-           loading="lazy">
-      <figcaption>Australia — Quokka moment 🐿️🦘</figcaption>
-    </figure>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · Yeon Elina Lee</title>
+  <meta name="description" content="A little about Elina: AI and ML systems, research at the University of Chicago, and life outside work with Eden.">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/personal.css">
+  <link rel="icon" href="/favicon.ico?v=eden-20261125" sizes="any">
+  <link rel="icon" href="/assets/img/eden-icon-32.png?v=eden-20261125" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon.svg?v=eden-20261125" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/eden-icon-180.png?v=eden-20261125" sizes="180x180">
+</head>
+<body class="personal-page">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Yeon Elina Lee</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/research/">Research</a>
+      </nav>
+    </div>
+  </header>
 
-    <figure class="about-photo">
-      <img src="/assets/img/me_2026.jpg"
-           alt="Yeon Elina Lee, 2026"
-           loading="lazy">
-      <figcaption>2026 📸</figcaption>
-    </figure>
-  </div>
+  <main class="container main personal-about">
+    <p class="personal-eyebrow">ABOUT ME</p>
+    <h1>A little about me.</h1>
+    <div class="personal-about-copy">
+      <p class="personal-about-lead">
+        I’m Elina, a data science master’s student at the University of Chicago
+        and a research assistant in the DECIDE Lab at the Pritzker School of Medicine.
+        Before coming to Chicago, I worked on AI systems and optimization at Samsung Electronics.
+      </p>
+      <p>
+        I like moving between theory and implementation: understanding why a method works,
+        building it, and checking what happens with real data. My interests include
+        ML systems, optimization, and decision-making. I enjoy following an idea all the
+        way through, from the underlying math to software that people can actually use.
+      </p>
 
-  <div class="footer">© 2026 Yeon Elina Lee · Hosted on GitHub Pages</div>
-</main>
-</body></html>
+      <section class="personal-outside" aria-labelledby="outside-heading">
+        <h2 id="outside-heading">Outside of work</h2>
+        <p>
+          I’m happiest in nature and around animals. I love exploring new places with my dog,
+          Eden, and finding quiet moments in a busy day.
+        </p>
+        <div class="personal-moments" aria-label="A few personal moments">
+          <figure class="personal-moment">
+            <img class="personal-photo-eden" src="/assets/img/elina-eden-beach.png"
+                 alt="Elina holding Eden on a beach at sunset"
+                 width="941" height="1672" loading="lazy" decoding="async">
+            <figcaption>With Eden</figcaption>
+          </figure>
+          <figure class="personal-moment">
+            <img class="personal-photo-quiet" src="/assets/img/elina-quiet-moment.png"
+                 alt="Elina smiling on a sofa beside a sunlit window"
+                 width="1672" height="941" loading="lazy" decoding="async">
+            <figcaption>A quiet moment</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+    <div class="footer">© 2026 Yeon Elina Lee · Hosted on GitHub Pages</div>
+  </main>
+</body>
+</html>
+
