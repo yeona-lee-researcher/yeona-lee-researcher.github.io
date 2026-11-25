@@ -1,4 +1,4 @@
-/* Home and About refresh. The shared site stylesheet stays unchanged. */
+/* Home and About layouts, portraits, and the Eden cursor download. */
 .personal-page {
   --personal-ink: #17243b;
   --personal-blue: #315fc2;
@@ -256,6 +256,46 @@
   color: var(--personal-muted);
   font-size: .85rem;
   line-height: 1.5;
+}
+
+.eden-download {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 6rem;
+}
+
+.eden-download > img {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.eden-download h2 {
+  margin: 0 0 .65rem;
+  color: var(--personal-ink);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.personal-about-copy .eden-download-meta,
+.personal-about-copy .eden-download-note {
+  font-size: .875rem;
+  line-height: 1.65;
+}
+
+.eden-download .personal-actions {
+  margin-bottom: .9rem;
+}
+
+@media (max-width: 480px) {
+  .eden-download {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .8rem;
+  }
 }
 
 @media (max-width: 850px) {

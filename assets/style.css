@@ -592,11 +592,11 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
 /* Eden cursors: use custom pointers only with a precise desktop pointing device. */
 @media (hover: hover) and (pointer: fine) {
   html, body {
-    cursor: url('/assets/cursor/eden-default.png') 2 2, auto;
+    cursor: url('/assets/cursor/eden-default.png?v=eden-40-20261125') 2 2, auto;
   }
 
-  :where(p, h1, h2, h3, h4, h5, h6, li, dt, dd, blockquote, pre, code,
-         figcaption, input, textarea, select,
+  /* Keep Eden over readable text; only editable controls need a native cursor. */
+  :where(input, textarea, select,
          [contenteditable]:not([contenteditable="false"])) {
     cursor: auto;
   }
@@ -606,6 +606,111 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
   input[type="button"]:not(:disabled),
   input[type="submit"]:not(:disabled),
   input[type="reset"]:not(:disabled) {
-    cursor: url('/assets/cursor/eden-link.png') 2 2, pointer;
+    cursor: url('/assets/cursor/eden-link.png?v=eden-40-20261125') 2 2, pointer;
+  }
+}
+
+/* Hand-drawn signature: these centerline paths are the actual pen strokes. */
+.brand.signature-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: clamp(11.4rem, 18vw, 13rem);
+  max-width: 100%;
+  min-height: 2.6rem;
+  line-height: 1;
+  color: #243b9c;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  text-decoration: none;
+}
+
+.signature-mark {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.signature-stroke {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  --write-duration: .34s;
+  --write-delay: 0s;
+}
+
+.signature-elina {
+  --write-duration: .4s;
+  --write-delay: .34s;
+}
+
+.signature-dot {
+  --write-duration: .05s;
+  --write-delay: .74s;
+}
+
+.signature-lee {
+  --write-duration: .29s;
+  --write-delay: .79s;
+}
+
+.signature-flourish {
+  --write-duration: .15s;
+  --write-delay: 1.08s;
+}
+
+.brand.signature-brand:focus-visible {
+  outline: 2px solid #315fc2;
+  outline-offset: 5px;
+  border-radius: .25rem;
+}
+
+@keyframes signature-write {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* A keyboard focus draws once. Leaving the link restores its finished state. */
+@media (prefers-reduced-motion: no-preference) {
+  .signature-brand:focus-visible .signature-stroke {
+    animation: signature-write var(--write-duration) linear var(--write-delay) 1 both;
+  }
+}
+
+/* Touch navigation never depends on a hover animation. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .signature-brand:hover .signature-stroke {
+    animation: signature-write var(--write-duration) linear var(--write-delay) 1 both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signature-brand .signature-stroke {
+    animation: none !important;
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: .6rem;
+  }
+
+  .brand.signature-brand {
+    width: 11.8rem;
+  }
+
+  .signature-brand + .nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    gap: .2rem;
+  }
+
+  .signature-brand + .nav a {
+    margin-left: 0;
   }
 }
